@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "name": "dscextension",
+      "apiVersion": "2021-04-01",
+      "location": "westeurope",
+      "tags": null,
+      "properties": {
+        "autoUpgradeMinorVersion": true,
+        "publisher": "Microsoft.Powershell",
+        "type": "DSC",
+        "typeHandlerVersion": "2.73",
+        "settings": {
+          "modulesUrl": "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration_1-25-2021.zip",
+          "configurationFunction": "Configuration.ps1\\AddSessionHost",
+          "properties": {
+            "hostPoolName": "hostpool01-weu",
+            "registrationInfoToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg2Mjg0QjJDMkE5RTNFRTQxMzdFMTU3RTVFNzhCMzc4M0Y2QzA5NjEiLCJ0eXAiOiJKV1QifQ.eyJSZWdpc3RyYXRpb25JZCI6IjZhNDMzZDBkLWQ4OGItNGM4Ny05NTM5LTZmMmEwMGMzNGE1ZiIsIkJyb2tlclVyaSI6Imh0dHBzOi8vcmRicm9rZXItZy1ldS1yMC53dmQubWljcm9zb2Z0LmNvbS8iLCJEaWFnbm9zdGljc1VyaSI6Imh0dHBzOi8vcmRkaWFnbm9zdGljcy1nLWV1LXIwLnd2ZC5taWNyb3NvZnQuY29tLyIsIkVuZHBvaW50UG9vbElkIjoiMTNiNjljOGMtOTAyMi00NTc0LTlmOTQtZTgzMTdjOTcyYmMzIiwiR2xvYmFsQnJva2VyVXJpIjoiaHR0cHM6Ly9yZGJyb2tlci53dmQubWljcm9zb2Z0LmNvbS8iLCJHZW9ncmFwaHkiOiJFVSIsIm5iZiI6MTYxNTYzMDM4NywiZXhwIjoxNjE1NzE2NzM3LCJpc3MiOiJSREluZnJhVG9rZW5NYW5hZ2VyIiwiYXVkIjoiUkRtaSJ9.VYSsELsU9L4vlbP_3MUhMxrBiCCO1LnV4W3LkdNWqQmfsGTwAQwCI37BzGpEPHFF9nArR_Bjd6pblqSHbNm8hFdY58z-v6ye9gc6f57zUhJ3JjKOyesgpM8W0s5iF8ppQoWoEXRLHDzyaBt51C6mIqcsT8MVqoL8zkipwaJNLPIXvdhknGGHWhsWTnKvJWm9B16FvnHbZrovw7MpW9asCMzLXg6s-hrglTsHPwbfMS6Jn4qy2RbXAVUVP_G5la-SR91aqiAyv211K5J6e-hc7a-wC8aF7IzM5Rns4-eEpWtV8lDATwXgh48mMVQUESvYzfRMcS0CCBRhA74JStEb0g",
+            "aadJoin": false
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}
