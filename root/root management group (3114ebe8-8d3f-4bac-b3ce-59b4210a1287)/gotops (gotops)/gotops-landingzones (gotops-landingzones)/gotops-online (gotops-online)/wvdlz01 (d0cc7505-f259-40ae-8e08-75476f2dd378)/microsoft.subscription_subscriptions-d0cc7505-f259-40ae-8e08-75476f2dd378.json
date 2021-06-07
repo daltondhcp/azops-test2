@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-08-01/managementGroupDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Management/managementGroups/subscriptions",
+      "name": "gotOps-online/d0cc7505-f259-40ae-8e08-75476f2dd378",
+      "apiVersion": "2021-04-01",
+      "scope": "/"
+    }
+  ],
+  "outputs": {}
+}

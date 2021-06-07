@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "5fb1f907-d577-5f40-9ba2-645e7ed18adb",
+      "apiVersion": "2021-04-01-preview",
+      "properties": {
+        "DisplayName": "Deploy-AKS-Policy",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "e8e97fbc-6e4d-4014-8330-8b6fc9e17a3e",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        "RoleDefinitionName": "Owner"
+      }
+    }
+  ],
+  "outputs": {}
+}

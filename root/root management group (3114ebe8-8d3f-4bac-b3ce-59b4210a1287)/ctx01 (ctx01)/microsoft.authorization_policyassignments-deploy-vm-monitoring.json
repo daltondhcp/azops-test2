@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-VM-Monitoring",
+      "apiVersion": "2020-09-01",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned",
+        "principalId": "9af36442-5048-49f5-9cef-d75d49b537a3",
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287"
+      },
+      "properties": {
+        "Scope": "/providers/Microsoft.Management/managementGroups/ctx01",
+        "NotScopes": null,
+        "DisplayName": "Deploy-VM-Monitoring",
+        "Description": "Deploy-VM-Monitoring",
+        "EnforcementMode": "Default",
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/55f3eceb-5573-4f18-9695-226972c6d74a",
+        "Parameters": {
+          "logAnalytics_1": {
+            "value": "/subscriptions/04248a84-9f56-4541-ad07-f357ac99d483/resourcegroups/ctx01-mgmt/providers/microsoft.operationalinsights/workspaces/ctx01-la-04248a84-9f56-4541-ad07-f357ac99d483"
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

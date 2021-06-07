@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "cdfd6425-08b6-5e7e-a33c-d8f0df3d1d16",
+      "apiVersion": "2021-04-01-preview",
+      "properties": {
+        "DisplayName": "Deploy-VM-Backup",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "9f7aa35b-01a9-4782-a2e5-f0efa6dfc6ec",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        "RoleDefinitionName": "Owner"
+      }
+    }
+  ],
+  "outputs": {}
+}

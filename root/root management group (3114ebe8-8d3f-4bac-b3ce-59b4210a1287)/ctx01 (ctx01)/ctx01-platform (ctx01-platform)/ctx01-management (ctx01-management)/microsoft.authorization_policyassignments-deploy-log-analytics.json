@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-Log-Analytics",
+      "apiVersion": "2020-09-01",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned",
+        "principalId": "f0b5d459-c2e1-4c48-89ac-f4667706c997",
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287"
+      },
+      "properties": {
+        "Scope": "/providers/Microsoft.Management/managementGroups/ctx01-management",
+        "NotScopes": null,
+        "DisplayName": "Deploy-Log-Analytics",
+        "Description": "Deploy-Log-Analytics",
+        "EnforcementMode": "Default",
+        "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/ctx01/providers/Microsoft.Authorization/policyDefinitions/Deploy-Log-Analytics",
+        "Parameters": {
+          "workspaceName": {
+            "value": "ctx01-la-04248a84-9f56-4541-ad07-f357ac99d483"
+          },
+          "automationAccountName": {
+            "value": "ctx01-a-04248a84-9f56-4541-ad07-f357ac99d483"
+          },
+          "workspaceRegion": {
+            "value": "eastus"
+          },
+          "automationRegion": {
+            "value": "eastus"
+          },
+          "rgName": {
+            "value": "ctx01-mgmt"
+          },
+          "retentionInDays": {
+            "value": "30"
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

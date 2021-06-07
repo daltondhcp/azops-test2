@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "388e4c7d-0712-506d-9c97-a331c29ad7c2",
+      "apiVersion": "2021-04-01-preview",
+      "properties": {
+        "DisplayName": "Deploy-VM-Monitoring",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "9af36442-5048-49f5-9cef-d75d49b537a3",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        "RoleDefinitionName": "Owner"
+      }
+    }
+  ],
+  "outputs": {}
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "b711b161-bb9b-5235-ae34-5b05514bfa49",
+      "apiVersion": "2021-04-01-preview",
+      "properties": {
+        "DisplayName": "Deploy-Resource-Diag",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "e854e2fe-e935-4c42-a2fc-1b49d513d666",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        "RoleDefinitionName": "Owner"
+      }
+    }
+  ],
+  "outputs": {}
+}
