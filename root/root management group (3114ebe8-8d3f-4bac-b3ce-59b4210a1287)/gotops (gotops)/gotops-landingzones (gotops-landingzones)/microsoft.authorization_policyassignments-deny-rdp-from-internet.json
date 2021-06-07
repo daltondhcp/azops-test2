@@ -14,7 +14,7 @@
         "NotScopes": [],
         "DisplayName": "Deny-RDP-from-Internet",
         "Description": "Deny-RDP-from-Internet",
-        "EnforcementMode": "Default",
+        "EnforcementMode": "DoNotEnforce",
         "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/gotOps/providers/Microsoft.Authorization/policyDefinitions/Deny-RDP-From-Internet",
         "Parameters": {}
       }
