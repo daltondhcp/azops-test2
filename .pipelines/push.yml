@@ -62,13 +62,22 @@ jobs:
       # Install required runtime modules
       #
 
-      - task: PowerShell@2
-        displayName: "Dependencies"
-        inputs:
-          targetType: "inline"
-          script: |
-            Install-Module -Name AzOps -Force
-
+      #- task: PowerShell@2
+      #  displayName: "Dependencies"
+      #  inputs:
+      #    targetType: "inline"
+      #    script: |
+      #      Install-Module -Name AzOps -Force
+      - name: "Dependencies"
+        run: |
+          . .github/scripts/Install.ps1
+          Install-SourceModule -Repository "gbordier/AzOps" -Branch "gbordier-patch-subscriptiontarget"
+          $module = Get-Module -Name AzOps -ListAvailable
+          $data = Import-PowerShellDataFile -Path $module.Path
+          foreach ($dependency in $data.RequiredModules) {
+              Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
+          }
+        shell: pwsh
       #
       # Connect
       # Authenticate Azure context
