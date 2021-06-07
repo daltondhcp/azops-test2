@@ -1,5 +1,5 @@
 resource storage1 'Microsoft.Storage/storageAccounts@2020-08-01-preview' = {
-  name: 'teststoragejohan12346'
+  name: 'teststoragejohan123446'
   location: 'westeurope'
   sku: {
     name: 'Standard_LRS'
