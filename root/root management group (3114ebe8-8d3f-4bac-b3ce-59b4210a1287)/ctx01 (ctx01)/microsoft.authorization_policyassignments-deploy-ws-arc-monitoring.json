@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-WS-Arc-Monitoring",
+      "apiVersion": "2020-09-01",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned",
+        "principalId": "68356673-0ca5-4aae-9f21-b7182f8cfde1",
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287"
+      },
+      "properties": {
+        "Scope": "/providers/Microsoft.Management/managementGroups/ctx01",
+        "NotScopes": null,
+        "DisplayName": "Deploy-Windows-Arc-Monitoring",
+        "Description": "Deploy-Windows-Arc-Monitoring",
+        "EnforcementMode": "Default",
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/69af7d4a-7b18-4044-93a9-2651498ef203",
+        "Parameters": {
+          "logAnalytics": {
+            "value": "/subscriptions/04248a84-9f56-4541-ad07-f357ac99d483/resourcegroups/ctx01-mgmt/providers/microsoft.operationalinsights/workspaces/ctx01-la-04248a84-9f56-4541-ad07-f357ac99d483"
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "8fac527e-5a0f-5ec6-8bc9-988bb8df6e6e",
+      "apiVersion": "2021-04-01-preview",
+      "properties": {
+        "DisplayName": "Enforce-SQL-Encryption",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "204e05fd-0bb2-43c6-8ae3-6aed0b616933",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        "RoleDefinitionName": "Owner"
+      }
+    }
+  ],
+  "outputs": {}
+}

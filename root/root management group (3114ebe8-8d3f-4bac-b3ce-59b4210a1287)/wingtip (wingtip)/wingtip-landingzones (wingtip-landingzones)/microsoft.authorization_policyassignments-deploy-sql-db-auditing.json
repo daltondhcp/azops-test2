@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-SQL-DB-Auditing",
+      "apiVersion": "2020-09-01",
+      "location": "westeurope",
+      "identity": {
+        "type": "SystemAssigned",
+        "principalId": "8ee25ade-f2cc-4e67-9d42-f62d50fd44af",
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287"
+      },
+      "properties": {
+        "Scope": "/providers/Microsoft.Management/managementGroups/wingtip-landingzones",
+        "NotScopes": null,
+        "DisplayName": "Deploy-SQL-Audit",
+        "Description": "Deploy-SQL-Audit",
+        "EnforcementMode": "Default",
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9",
+        "Parameters": null
+      }
+    }
+  ],
+  "outputs": {}
+}

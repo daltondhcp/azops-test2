@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-AKS-Policy",
+      "apiVersion": "2020-09-01",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned",
+        "principalId": "e8e97fbc-6e4d-4014-8330-8b6fc9e17a3e",
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287"
+      },
+      "properties": {
+        "Scope": "/providers/Microsoft.Management/managementGroups/ctx01-landingzones",
+        "NotScopes": null,
+        "DisplayName": "Deploy-AKS-Policy",
+        "Description": "Deploy-AKS-Policy",
+        "EnforcementMode": "Default",
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a8eff44f-8c92-45c3-a3fb-9880802d67a7",
+        "Parameters": null
+      }
+    }
+  ],
+  "outputs": {}
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-AzActivity-Log",
+      "apiVersion": "2020-09-01",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned",
+        "principalId": "4d94afff-122b-4166-961d-7904c47df75b",
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287"
+      },
+      "properties": {
+        "Scope": "/providers/Microsoft.Management/managementGroups/ctx01",
+        "NotScopes": null,
+        "DisplayName": "Deploy-AzActivity-Log",
+        "Description": "Deploy-AzActivity-Log",
+        "EnforcementMode": "Default",
+        "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/ctx01/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-ActivityLog",
+        "Parameters": {
+          "logAnalytics": {
+            "value": "/subscriptions/04248a84-9f56-4541-ad07-f357ac99d483/resourcegroups/ctx01-mgmt/providers/microsoft.operationalinsights/workspaces/ctx01-la-04248a84-9f56-4541-ad07-f357ac99d483"
+          },
+          "logsEnabled": {
+            "value": "True"
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

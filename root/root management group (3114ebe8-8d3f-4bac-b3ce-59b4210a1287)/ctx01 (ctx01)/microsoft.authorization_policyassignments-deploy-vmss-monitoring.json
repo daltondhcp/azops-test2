@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-VMSS-Monitoring",
+      "apiVersion": "2020-09-01",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned",
+        "principalId": "94499ad9-494e-481f-a9c7-da1b91f6f143",
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287"
+      },
+      "properties": {
+        "Scope": "/providers/Microsoft.Management/managementGroups/ctx01",
+        "NotScopes": null,
+        "DisplayName": "Deploy-VMSS-Monitoring",
+        "Description": "Deploy-VMSS-Monitoring",
+        "EnforcementMode": "Default",
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/75714362-cae7-409e-9b99-a8e5075b7fad",
+        "Parameters": {
+          "logAnalytics_1": {
+            "value": "/subscriptions/04248a84-9f56-4541-ad07-f357ac99d483/resourcegroups/ctx01-mgmt/providers/microsoft.operationalinsights/workspaces/ctx01-la-04248a84-9f56-4541-ad07-f357ac99d483"
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}
