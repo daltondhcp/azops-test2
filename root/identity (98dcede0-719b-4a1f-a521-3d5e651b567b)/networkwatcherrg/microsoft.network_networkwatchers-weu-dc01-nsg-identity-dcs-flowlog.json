@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/networkWatchers/flowLogs",
+      "name": "weu-dc01-nsg-identity-dcs-flowlog",
+      "apiVersion": "2021-02-01",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "targetResourceId": "/subscriptions/98dcede0-719b-4a1f-a521-3d5e651b567b/resourceGroups/identity-dcs/providers/Microsoft.Network/networkSecurityGroups/weu-dc01-nsg",
+        "targetResourceGuid": "049a175b-a181-41df-bdfa-97a935de0d21",
+        "storageId": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/NetworkWatcherRG/providers/Microsoft.Storage/storageAccounts/welog001",
+        "enabled": true,
+        "flowAnalyticsConfiguration": {
+          "networkWatcherFlowAnalyticsConfiguration": {
+            "enabled": true,
+            "workspaceId": "af9e6b5f-ff72-4fe0-ac76-f61dd012456e",
+            "workspaceRegion": "eastus",
+            "workspaceResourceId": "/subscriptions/04248a84-9f56-4541-ad07-f357ac99d483/resourcegroups/ctx01-mgmt/providers/microsoft.operationalinsights/workspaces/ctx01-la-04248a84-9f56-4541-ad07-f357ac99d483",
+            "trafficAnalyticsInterval": 10
+          }
+        },
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        },
+        "format": {
+          "type": "JSON",
+          "version": 2
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

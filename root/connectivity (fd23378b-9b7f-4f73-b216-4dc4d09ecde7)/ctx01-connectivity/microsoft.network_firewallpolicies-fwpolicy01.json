@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/firewallPolicies",
+      "name": "FwPolicy01",
+      "apiVersion": "2021-02-01",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "sku": {
+          "tier": "Premium"
+        },
+        "threatIntelMode": "Alert",
+        "childPolicies": [],
+        "ruleCollectionGroups": [
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/firewallPolicies/FwPolicy01/ruleCollectionGroups/DefaultNetworkRuleCollectionGroup"
+          },
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/firewallPolicies/FwPolicy01/ruleCollectionGroups/DefaultApplicationRuleCollectionGroup"
+          }
+        ],
+        "firewalls": [
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/azureFirewalls/ctx01-weu-fw01"
+          }
+        ],
+        "intrusionDetection": {
+          "mode": "Alert",
+          "configuration": {
+            "signatureOverrides": [],
+            "bypassTrafficSettings": []
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

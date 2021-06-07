@@ -1,0 +1,174 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/applicationGateways",
+      "name": "test",
+      "apiVersion": "2021-02-01",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "sku": {
+          "name": "Standard_v2",
+          "tier": "Standard_v2"
+        },
+        "operationalState": "Running",
+        "gatewayIPConfigurations": [
+          {
+            "name": "appGatewayIpConfig",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/gatewayIPConfigurations/appGatewayIpConfig",
+            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "subnet": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/virtualNetworks/ctx01-hub-westeurope/subnets/appgw"
+              }
+            },
+            "type": "Microsoft.Network/applicationGateways/gatewayIPConfigurations"
+          }
+        ],
+        "sslCertificates": [],
+        "trustedRootCertificates": [],
+        "trustedClientCertificates": [],
+        "sslProfiles": [],
+        "frontendIPConfigurations": [
+          {
+            "name": "appGwPublicFrontendIp",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/frontendIPConfigurations/appGwPublicFrontendIp",
+            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIPAddress": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/publicIPAddresses/appgw"
+              },
+              "httpListeners": [
+                {
+                  "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/httpListeners/test"
+                }
+              ]
+            }
+          }
+        ],
+        "frontendPorts": [
+          {
+            "name": "port_80",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/frontendPorts/port_80",
+            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "port": 80,
+              "httpListeners": [
+                {
+                  "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/httpListeners/test"
+                }
+              ]
+            },
+            "type": "Microsoft.Network/applicationGateways/frontendPorts"
+          }
+        ],
+        "backendAddressPools": [
+          {
+            "name": "dummy",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/backendAddressPools/dummy",
+            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "backendAddresses": [],
+              "requestRoutingRules": [
+                {
+                  "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/requestRoutingRules/test"
+                }
+              ]
+            },
+            "type": "Microsoft.Network/applicationGateways/backendAddressPools"
+          }
+        ],
+        "loadDistributionPolicies": [],
+        "backendHttpSettingsCollection": [
+          {
+            "name": "test",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/backendHttpSettingsCollection/test",
+            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "port": 80,
+              "protocol": "Http",
+              "cookieBasedAffinity": "Disabled",
+              "pickHostNameFromBackendAddress": false,
+              "requestTimeout": 20,
+              "requestRoutingRules": [
+                {
+                  "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/requestRoutingRules/test"
+                }
+              ]
+            },
+            "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+          }
+        ],
+        "httpListeners": [
+          {
+            "name": "test",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/httpListeners/test",
+            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "frontendIPConfiguration": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/frontendIPConfigurations/appGwPublicFrontendIp"
+              },
+              "frontendPort": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/frontendPorts/port_80"
+              },
+              "protocol": "Http",
+              "hostNames": [],
+              "requireServerNameIndication": false,
+              "requestRoutingRules": [
+                {
+                  "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/requestRoutingRules/test"
+                }
+              ]
+            },
+            "type": "Microsoft.Network/applicationGateways/httpListeners"
+          }
+        ],
+        "urlPathMaps": [],
+        "requestRoutingRules": [
+          {
+            "name": "test",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/requestRoutingRules/test",
+            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "ruleType": "Basic",
+              "httpListener": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/httpListeners/test"
+              },
+              "backendAddressPool": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/backendAddressPools/dummy"
+              },
+              "backendHttpSettings": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/backendHttpSettingsCollection/test"
+              }
+            },
+            "type": "Microsoft.Network/applicationGateways/requestRoutingRules"
+          }
+        ],
+        "probes": [],
+        "rewriteRuleSets": [],
+        "redirectConfigurations": [],
+        "privateLinkConfigurations": [],
+        "privateEndpointConnections": [],
+        "enableHttp2": false,
+        "autoscaleConfiguration": {
+          "minCapacity": 2,
+          "maxCapacity": 10
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}
