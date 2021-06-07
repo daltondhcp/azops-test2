@@ -64,7 +64,14 @@ jobs:
               Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
           }
         shell: pwsh
-
+        
+      - name: "Install Bicep"
+        run: |
+          curl -Lo bicep.bin https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
+          chmod +x ./bicep.bin
+          sudo mv ./bicep.bin /usr/local/bin/bicep
+          bicep --version
+        shell: bash
       #
       # Connect
       # Authenticate Azure context
