@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.DesktopVirtualization/hostpools",
+      "name": "hostpool01-weu",
+      "apiVersion": "2021-02-01-preview",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "friendlyName": null,
+        "description": "Created through the WVD extension",
+        "hostPoolType": "Pooled",
+        "personalDesktopAssignmentType": null,
+        "applicationGroupReferences": [
+          "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourcegroups/hostpool01-weu/providers/Microsoft.DesktopVirtualization/applicationgroups/hostpool01-weu-DAG"
+        ],
+        "customRdpProperty": "",
+        "maxSessionLimit": 10,
+        "loadBalancerType": "BreadthFirst",
+        "validationEnvironment": false,
+        "ring": null,
+        "registrationInfo": null,
+        "vmTemplate": "{\"domain\":\"corp.contoso.com\",\"galleryImageOffer\":\"office-365\",\"galleryImagePublisher\":\"MicrosoftWindowsDesktop\",\"galleryImageSKU\":\"20h2-evd-o365pp\",\"imageType\":\"Gallery\",\"imageUri\":null,\"customImageId\":null,\"namePrefix\":\"weush\",\"osDiskType\":\"StandardSSD_LRS\",\"useManagedDisks\":true,\"vmSize\":{\"id\":\"Standard_D2s_v3\",\"cores\":2,\"ram\":8},\"galleryItemId\":\"microsoftwindowsdesktop.office-36520h2-evd-o365pp\"}",
+        "preferredAppGroupType": "Desktop",
+        "migrationRequest": null,
+        "cloudPcResource": false,
+        "startVMOnConnect": false,
+        "ssoadfsAuthority": null,
+        "ssoClientId": null,
+        "ssoClientSecretKeyVaultPath": null,
+        "ssoSecretType": null,
+        "objectId": "13b69c8c-9022-4574-9f94-e8317c972bc3"
+      }
+    }
+  ],
+  "outputs": {}
+}
