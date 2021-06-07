@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Compute/disks",
+      "name": "weu-dc01_disk1_1592deeee592441da44ee81b1333bb70",
+      "apiVersion": "2021-04-01",
+      "location": "westeurope",
+      "tags": null,
+      "properties": {
+        "osType": "Windows",
+        "creationData": {
+          "createOption": "FromImage",
+          "imageReference": {
+            "id": "/Subscriptions/427fe0e5-3e7b-4400-aa52-720430d51781/Providers/Microsoft.Compute/Locations/westeurope/Publishers/microsoftwindowsserver/ArtifactTypes/VMImage/Offers/windowsserver/Skus/2019-datacenter/Versions/17763.1817.2103030313"
+          }
+        },
+        "diskSizeGB": 127,
+        "diskIOPSReadWrite": 500,
+        "diskMBpsReadWrite": 100,
+        "encryption": {
+          "type": "EncryptionAtRestWithPlatformKey"
+        },
+        "diskState": "Reserved",
+        "diskSizeBytes": 136367308800,
+        "uniqueId": "1592deee-e592-441d-a44e-e81b1333bb70",
+        "networkAccessPolicy": "AllowAll"
+      }
+    }
+  ],
+  "outputs": {}
+}

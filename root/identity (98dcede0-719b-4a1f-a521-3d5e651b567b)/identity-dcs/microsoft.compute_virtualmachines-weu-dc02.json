@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "weu-dc02",
+      "apiVersion": "2021-04-01",
+      "location": "westeurope",
+      "tags": null,
+      "properties": {
+        "vmId": "e0fdf407-314d-4c43-addb-81b30c66dea6",
+        "hardwareProfile": {
+          "vmSize": "Standard_D2s_v3"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2019-Datacenter",
+            "version": "latest",
+            "exactVersion": "17763.1817.2103030313"
+          },
+          "osDisk": {
+            "osType": "Windows",
+            "name": "weu-dc02_disk1_121adeabba834f10b82454f99262f2a2",
+            "createOption": "FromImage",
+            "caching": "ReadWrite",
+            "managedDisk": {
+              "id": "/subscriptions/98dcede0-719b-4a1f-a521-3d5e651b567b/resourceGroups/IDENTITY-DCS/providers/Microsoft.Compute/disks/weu-dc02_disk1_121adeabba834f10b82454f99262f2a2"
+            }
+          },
+          "dataDisks": []
+        },
+        "osProfile": {
+          "computerName": "weu-dc02",
+          "adminUsername": "sysadmin",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true,
+            "patchSettings": {
+              "patchMode": "AutomaticByOS",
+              "assessmentMode": "ImageDefault",
+              "enableHotpatching": false
+            }
+          },
+          "secrets": [],
+          "allowExtensionOperations": true,
+          "requireGuestProvisionSignal": true
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "/subscriptions/98dcede0-719b-4a1f-a521-3d5e651b567b/resourceGroups/identity-dcs/providers/Microsoft.Network/networkInterfaces/weu-dc02557"
+            }
+          ]
+        },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "enabled": true
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

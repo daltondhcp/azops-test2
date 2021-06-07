@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "name": "test",
+      "apiVersion": "2018-11-30",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287",
+        "principalId": "18272978-dd5b-48d0-9f8d-a54a4454d62a",
+        "clientId": "99be78b9-b923-4e06-a12a-44e3fc498789"
+      }
+    }
+  ],
+  "outputs": {}
+}
