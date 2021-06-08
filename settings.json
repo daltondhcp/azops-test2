@@ -16,7 +16,8 @@
                 "Disabled",
                 "Deleted",
                 "Warned",
-                "Expired"
+                "Expired",
+                "Enabled"
             ],
             "Core.ExportRawTemplate": false,
             "Core.IgnoreContextCheck": false,
