@@ -1,6 +1,6 @@
 @minLength(3)
 @maxLength(11)
-param namePrefix string = test
+param namePrefix string
 param location string = resourceGroup().location
 
 module stgModule './module.bicep' = {
