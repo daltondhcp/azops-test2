@@ -34,11 +34,16 @@
                 {},
                 {},
                 {},
+                {},
+                {}
+              ],
+              "privateEndpoints": [
                 {}
               ],
               "serviceEndpoints": [],
               "delegations": [],
-              "privateEndpointNetworkPolicies": "Enabled",
+              "purpose": "PrivateEndpoints",
+              "privateEndpointNetworkPolicies": "Disabled",
               "privateLinkServiceNetworkPolicies": "Enabled"
             },
             "type": "Microsoft.Network/virtualNetworks/subnets"
