@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.DesktopVirtualization/hostpools",
       "name": "hostpool01-weu",
-      "apiVersion": "2021-02-01-preview",
+      "apiVersion": "2021-03-09-preview",
       "location": "westeurope",
       "tags": {},
       "properties": {
