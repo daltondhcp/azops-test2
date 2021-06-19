@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.DesktopVirtualization/applicationgroups",
       "name": "hostpool01-weu-DAG",
-      "apiVersion": "2021-03-09-preview",
+      "apiVersion": "2021-02-01-preview",
       "location": "westeurope",
       "tags": {},
       "properties": {
