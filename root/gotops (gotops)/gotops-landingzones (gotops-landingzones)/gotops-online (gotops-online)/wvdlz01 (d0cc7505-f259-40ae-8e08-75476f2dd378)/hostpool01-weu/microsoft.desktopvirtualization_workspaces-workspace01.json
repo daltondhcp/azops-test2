@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.DesktopVirtualization/workspaces",
       "name": "Workspace01",
-      "apiVersion": "2021-03-09-preview",
+      "apiVersion": "2021-02-01-preview",
       "location": "westeurope",
       "tags": null,
       "properties": {
