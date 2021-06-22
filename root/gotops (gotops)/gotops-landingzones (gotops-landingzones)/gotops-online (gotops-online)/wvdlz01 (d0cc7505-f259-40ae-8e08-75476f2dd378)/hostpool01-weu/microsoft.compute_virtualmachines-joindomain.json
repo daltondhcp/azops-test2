@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "joindomain",
-      "apiVersion": "2021-04-01",
+      "apiVersion": "2021-07-01",
       "location": "westeurope",
       "tags": null,
       "properties": {
