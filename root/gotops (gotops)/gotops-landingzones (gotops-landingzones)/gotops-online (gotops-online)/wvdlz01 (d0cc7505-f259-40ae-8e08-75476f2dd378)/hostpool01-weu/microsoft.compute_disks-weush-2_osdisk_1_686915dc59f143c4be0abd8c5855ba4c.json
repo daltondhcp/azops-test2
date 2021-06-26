@@ -28,7 +28,8 @@
         "diskState": "Reserved",
         "diskSizeBytes": 136367308800,
         "uniqueId": "686915dc-59f1-43c4-be0a-bd8c5855ba4c",
-        "networkAccessPolicy": "AllowAll"
+        "networkAccessPolicy": "AllowAll",
+        "publicNetworkAccess": "Enabled"
       }
     }
   ],

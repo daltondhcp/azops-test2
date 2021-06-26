@@ -28,7 +28,8 @@
         "diskState": "Attached",
         "diskSizeBytes": 136367308800,
         "uniqueId": "b5c2b772-1d73-489e-9ad8-08435020fb29",
-        "networkAccessPolicy": "AllowAll"
+        "networkAccessPolicy": "AllowAll",
+        "publicNetworkAccess": "Enabled"
       }
     }
   ],
