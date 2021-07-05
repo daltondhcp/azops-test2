@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policySetDefinitions",
+      "name": "a57091b90c404290907c320c",
+      "apiVersion": "2020-09-01",
+      "properties": {
+        "Description": "",
+        "DisplayName": "Public network access should be disabled for PAAS services #2",
+        "Parameters": {},
+        "PolicyDefinitionGroups": [],
+        "PolicyDefinitions": [
+          {
+            "policyDefinitionReferenceId": "Azure Cosmos DB should disable public network access_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/797b37f7-06b8-444c-b1ad-fc62867f335a",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          },
+          {
+            "policyDefinitionReferenceId": "Public network access should be disabled for Container registries_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0fdf0491-d080-4575-b627-ad0e843cba0f",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          },
+          {
+            "policyDefinitionReferenceId": "Public network access should be disabled for Azure File Sync_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/21a8cd35-125e-4d13-b82d-2e19b7208bb7",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          },
+          {
+            "policyDefinitionReferenceId": "Public network access should be disabled for PostgreSQL flexible servers_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e1de0e3-42cb-4ebc-a86d-61d0c619ca48",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          },
+          {
+            "policyDefinitionReferenceId": "Public network access should be disabled for Batch accounts_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/74c5a0ae-5e48-4738-b093-65e23a060488",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          },
+          {
+            "policyDefinitionReferenceId": "Public network access should be disabled for MySQL flexible servers_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c9299215-ae47-4f50-9c54-8a392f68a052",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          },
+          {
+            "policyDefinitionReferenceId": "Azure Kubernetes Service Private Clusters should be enabled_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/040732e8-d947-40b8-95d6-854c95024bf8",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          },
+          {
+            "policyDefinitionReferenceId": "[Preview]: Azure Key Vaults should use private link_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a6abeaec-4d90-4a02-805f-6b26c4d3fbe9",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          },
+          {
+            "policyDefinitionReferenceId": "Storage accounts should restrict network access_1",
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/34c877ad-507e-4c82-993e-3452a6e0ad3c",
+            "parameters": {
+              "effect": {
+                "value": "Deny"
+              }
+            },
+            "groupNames": []
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": {}
+}
