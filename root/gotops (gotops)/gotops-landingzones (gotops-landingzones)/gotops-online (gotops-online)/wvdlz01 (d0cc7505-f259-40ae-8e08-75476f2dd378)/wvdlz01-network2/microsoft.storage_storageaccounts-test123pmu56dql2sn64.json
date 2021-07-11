@@ -7,17 +7,15 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "test123pmu56dql2sn64",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2021-04-01",
       "location": "westeurope",
       "tags": {},
       "properties": {
-        "privateEndpointConnections": [],
         "keyCreationTime": {
           "key1": "2021-05-19T08:59:32.234343Z",
           "key2": "2021-05-19T08:59:32.234343Z"
         },
-        "minimumTlsVersion": "TLS1_0",
-        "allowBlobPublicAccess": true,
+        "privateEndpointConnections": [],
         "networkAcls": {
           "bypass": "AzureServices",
           "virtualNetworkRules": [],
