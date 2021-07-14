@@ -21,7 +21,8 @@
         "Description": "Deploy-SQL-Audit",
         "EnforcementMode": "Default",
         "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9",
-        "Parameters": null
+        "Parameters": null,
+        "NonComplianceMessages": null
       }
     }
   ],

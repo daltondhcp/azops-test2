@@ -16,7 +16,8 @@
         "Description": null,
         "EnforcementMode": "DoNotEnforce",
         "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/ctx01/providers/Microsoft.Authorization/policyDefinitions/b038db07-4ca5-424b-9643-f8eef8db4ca8",
-        "Parameters": {}
+        "Parameters": {},
+        "NonComplianceMessages": null
       }
     }
   ],

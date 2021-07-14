@@ -16,7 +16,8 @@
         "Description": "Deny-IP-Forwarding",
         "EnforcementMode": "DoNotEnforce",
         "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/88c0b9da-ce96-4b03-9635-f29a937e2900",
-        "Parameters": null
+        "Parameters": null,
+        "NonComplianceMessages": null
       }
     }
   ],

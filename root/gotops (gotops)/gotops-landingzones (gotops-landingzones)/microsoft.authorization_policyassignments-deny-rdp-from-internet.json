@@ -16,7 +16,8 @@
         "Description": "Deny-RDP-from-Internet",
         "EnforcementMode": "DoNotEnforce",
         "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/gotOps/providers/Microsoft.Authorization/policyDefinitions/Deny-RDP-From-Internet",
-        "Parameters": {}
+        "Parameters": {},
+        "NonComplianceMessages": null
       }
     }
   ],

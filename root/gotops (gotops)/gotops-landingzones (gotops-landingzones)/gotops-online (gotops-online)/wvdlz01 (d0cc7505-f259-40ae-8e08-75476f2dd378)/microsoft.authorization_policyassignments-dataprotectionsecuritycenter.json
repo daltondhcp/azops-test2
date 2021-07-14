@@ -16,7 +16,8 @@
         "Description": "This policy assignment was automatically created by Azure Security Center",
         "EnforcementMode": "Default",
         "PolicyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/9cb3cc7a-b39b-4b82-bc89-e5a5d9ff7b97",
-        "Parameters": null
+        "Parameters": null,
+        "NonComplianceMessages": null
       }
     }
   ],
