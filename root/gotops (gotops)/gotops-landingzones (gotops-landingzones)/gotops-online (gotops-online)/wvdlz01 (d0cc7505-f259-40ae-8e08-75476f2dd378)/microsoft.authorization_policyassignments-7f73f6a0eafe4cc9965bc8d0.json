@@ -34,7 +34,8 @@
           "defaultRouteNextHop": {
             "value": "10.100.0.4"
           }
-        }
+        },
+        "NonComplianceMessages": []
       }
     }
   ],

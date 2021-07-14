@@ -21,7 +21,8 @@
         "Description": "Deploy-AKS-Policy",
         "EnforcementMode": "Default",
         "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a8eff44f-8c92-45c3-a3fb-9880802d67a7",
-        "Parameters": null
+        "Parameters": null,
+        "NonComplianceMessages": null
       }
     }
   ],

@@ -16,7 +16,8 @@
         "Description": "Deny-Subnet-Without-Nsg",
         "EnforcementMode": "Default",
         "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/gotOps/providers/Microsoft.Authorization/policyDefinitions/Deny-Subnet-Without-Nsg",
-        "Parameters": null
+        "Parameters": null,
+        "NonComplianceMessages": null
       }
     }
   ],

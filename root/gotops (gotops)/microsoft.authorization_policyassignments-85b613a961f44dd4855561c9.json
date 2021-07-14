@@ -28,7 +28,8 @@
           "vnetRegion": {
             "value": "asiapacific"
           }
-        }
+        },
+        "NonComplianceMessages": []
       }
     }
   ],

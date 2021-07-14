@@ -28,7 +28,8 @@
           "logsEnabled": {
             "value": "True"
           }
-        }
+        },
+        "NonComplianceMessages": null
       }
     }
   ],

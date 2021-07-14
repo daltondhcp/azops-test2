@@ -25,7 +25,8 @@
           "logAnalytics": {
             "value": "/subscriptions/04248a84-9f56-4541-ad07-f357ac99d483/resourcegroups/gotops-mgmt/providers/microsoft.operationalinsights/workspaces/gotops-la-04248a84-9f56-4541-ad07-f357ac99d483"
           }
-        }
+        },
+        "NonComplianceMessages": null
       }
     }
   ],

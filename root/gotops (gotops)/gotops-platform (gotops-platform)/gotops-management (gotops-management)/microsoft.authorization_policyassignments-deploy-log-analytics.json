@@ -40,7 +40,8 @@
           "retentionInDays": {
             "value": "30"
           }
-        }
+        },
+        "NonComplianceMessages": null
       }
     }
   ],
