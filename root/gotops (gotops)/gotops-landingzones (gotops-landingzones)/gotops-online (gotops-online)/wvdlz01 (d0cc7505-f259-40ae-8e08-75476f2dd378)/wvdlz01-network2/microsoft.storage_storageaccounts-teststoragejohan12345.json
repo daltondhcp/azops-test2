@@ -11,11 +11,11 @@
       "location": "westeurope",
       "tags": {},
       "properties": {
-        "privateEndpointConnections": [],
         "keyCreationTime": {
           "key1": "2021-05-17T08:24:11.9799202Z",
           "key2": "2021-05-17T08:24:11.9799202Z"
         },
+        "privateEndpointConnections": [],
         "minimumTlsVersion": "TLS1_2",
         "allowBlobPublicAccess": false,
         "allowSharedKeyAccess": false,
