@@ -11,6 +11,10 @@
       "location": "westeurope",
       "tags": {},
       "properties": {
+        "keyCreationTime": {
+          "key1": "2021-06-07T16:28:02.42176Z",
+          "key2": "2021-06-07T16:28:02.42176Z"
+        },
         "privateEndpointConnections": [
           {
             "id": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourceGroups/wvdlz01-network/providers/Microsoft.Storage/storageAccounts/teststoragejohan1233446/privateEndpointConnections/teststoragejohan1233446.4e4a6afd-25ea-4523-bfe3-e6058170a313",
@@ -29,10 +33,6 @@
             }
           }
         ],
-        "keyCreationTime": {
-          "key1": "2021-06-07T16:28:02.42176Z",
-          "key2": "2021-06-07T16:28:02.42176Z"
-        },
         "minimumTlsVersion": "TLS1_2",
         "allowBlobPublicAccess": false,
         "allowSharedKeyAccess": false,
