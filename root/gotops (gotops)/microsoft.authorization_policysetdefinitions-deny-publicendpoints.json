@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Authorization/policySetDefinitions",
       "name": "Deny-PublicEndpoints",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2020-09-01",
       "properties": {
         "Description": "This policy denies creation of Azure PAAS services with exposed public endpoints.  This policy set includes the policy for the following services KeyVault, Storage accounts, AKS, Cosmos, SQL Servers, MariaDB, MySQL and Postgress. ",
         "DisplayName": "Public network access should be disabled for PAAS services",

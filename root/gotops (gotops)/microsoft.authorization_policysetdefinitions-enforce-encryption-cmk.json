@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Authorization/policySetDefinitions",
       "name": "Enforce-Encryption-CMK",
-      "apiVersion": "2021-06-01",
+      "apiVersion": "2020-09-01",
       "properties": {
         "Description": "Deny or Audit resources without Encryption with a customer-managed key (CMK)",
         "DisplayName": "Deny or Audit resources without Encryption with a customer-managed key (CMK)",
