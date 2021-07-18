@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deny-Storage-http",
-      "apiVersion": "2020-09-01",
+      "apiVersion": "2021-06-01",
       "location": "westeurope",
       "properties": {
         "Scope": "/providers/Microsoft.Management/managementGroups/gotOps-landingzones",

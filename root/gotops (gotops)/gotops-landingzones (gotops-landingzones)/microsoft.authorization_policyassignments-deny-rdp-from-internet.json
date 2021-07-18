@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "Deny-RDP-from-internet",
-      "apiVersion": "2020-09-01",
+      "apiVersion": "2021-06-01",
       "location": null,
       "properties": {
         "Scope": "/providers/Microsoft.Management/managementGroups/gotOps-landingzones",

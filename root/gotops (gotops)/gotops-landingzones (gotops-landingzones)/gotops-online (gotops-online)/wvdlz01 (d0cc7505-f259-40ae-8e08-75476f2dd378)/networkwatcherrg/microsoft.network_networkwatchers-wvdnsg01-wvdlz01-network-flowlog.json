@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/networkWatchers/flowLogs",
       "name": "wvdnsg01-wvdlz01-network-flowlog",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2021-03-01",
       "location": "westeurope",
       "tags": null,
       "properties": {
