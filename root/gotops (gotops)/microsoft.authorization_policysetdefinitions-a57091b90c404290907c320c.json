@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Authorization/policySetDefinitions",
       "name": "a57091b90c404290907c320c",
-      "apiVersion": "2020-09-01",
+      "apiVersion": "2021-06-01",
       "properties": {
         "Description": "",
         "DisplayName": "Public network access should be disabled for PAAS services #2",

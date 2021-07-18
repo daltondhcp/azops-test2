@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Authorization/policyAssignments",
       "name": "DataProtectionSecurityCenter",
-      "apiVersion": "2020-09-01",
+      "apiVersion": "2021-06-01",
       "location": null,
       "properties": {
         "Scope": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378",
