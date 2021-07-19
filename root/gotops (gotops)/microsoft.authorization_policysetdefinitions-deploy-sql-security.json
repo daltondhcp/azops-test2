@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Authorization/policySetDefinitions",
       "name": "Deploy-Sql-Security",
-      "apiVersion": "2020-09-01",
+      "apiVersion": "2021-06-01",
       "properties": {
         "Description": "Deploy auditing, Alert, TDE and SQL vulnerability to SQL Databases when it not exist in the deployment",
         "DisplayName": "Deploy SQL Database built-in SQL security configuration",

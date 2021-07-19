@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Authorization/policySetDefinitions",
       "name": "Deploy-Diag-LogAnalytics",
-      "apiVersion": "2020-09-01",
+      "apiVersion": "2021-06-01",
       "properties": {
         "Description": "This policy set deploys the configurations of application Azure resources to forward diagnostic logs and metrics to an Azure Log Analytics workspace. See the list of policies of the services that are included ",
         "DisplayName": "Deploy Diagnostic Settings to Azure Services",
