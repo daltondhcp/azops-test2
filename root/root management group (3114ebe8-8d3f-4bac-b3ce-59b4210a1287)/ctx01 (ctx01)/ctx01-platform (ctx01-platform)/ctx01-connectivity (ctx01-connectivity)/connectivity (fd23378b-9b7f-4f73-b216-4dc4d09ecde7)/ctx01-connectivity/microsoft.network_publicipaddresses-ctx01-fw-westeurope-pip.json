@@ -6,19 +6,16 @@
   "resources": [
     {
       "type": "Microsoft.Network/publicIPAddresses",
-      "name": "appgw",
-      "apiVersion": "2021-03-01",
+      "name": "ctx01-fw-westeurope-pip",
+      "apiVersion": "2021-02-01",
       "location": "westeurope",
       "tags": null,
       "properties": {
-        "ipAddress": "20.86.200.89",
+        "ipAddress": "51.124.71.108",
         "publicIPAddressVersion": "IPv4",
         "publicIPAllocationMethod": "Static",
         "idleTimeoutInMinutes": 4,
-        "ipTags": [],
-        "ipConfiguration": {
-          "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/frontendIPConfigurations/appGwPublicFrontendIp"
-        }
+        "ipTags": []
       }
     }
   ],
