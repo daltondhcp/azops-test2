@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-08-01/tenantDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Management/managementGroups",
+      "name": "enableDemo-platform",
+      "apiVersion": "2021-04-01",
+      "scope": "/",
+      "properties": {
+        "displayName": "enableDemo-platform",
+        "details": {
+          "parent": {
+            "id": "/providers/Microsoft.Management/managementGroups/enableDemo"
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2020-10-01",
+      "name": "AzOps-microsoft.management_managementgroups-nested",
+      "location": "northeurope",
+      "properties": {
+        "mode": "Incremental",
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-08-01/tenantDeploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "resources": [
+            {
+              "type": "Microsoft.Management/managementGroups",
+              "apiVersion": "2020-05-01",
+              "name": "enableDemo-identity",
+              "scope": "/",
+              "properties": {
+                "displayName": "enableDemo-identity",
+                "details": {
+                  "parent": {
+                    "id": "/providers/Microsoft.Management/managementGroups/enableDemo-platform"
+                  }
+                }
+              }
+            },
+            {
+              "type": "Microsoft.Management/managementGroups",
+              "apiVersion": "2020-05-01",
+              "name": "enableDemo-management",
+              "scope": "/",
+              "properties": {
+                "displayName": "enableDemo-management",
+                "details": {
+                  "parent": {
+                    "id": "/providers/Microsoft.Management/managementGroups/enableDemo-platform"
+                  }
+                }
+              }
+            },
+            {
+              "type": "Microsoft.Management/managementGroups",
+              "apiVersion": "2020-05-01",
+              "name": "enableDemo-connectivity",
+              "scope": "/",
+              "properties": {
+                "displayName": "enableDemo-connectivity",
+                "details": {
+                  "parent": {
+                    "id": "/providers/Microsoft.Management/managementGroups/enableDemo-platform"
+                  }
+                }
+              }
+            }
+          ],
+          "outputs": {}
+        }
+      },
+      "dependsOn": [
+        "/providers/Microsoft.Management/managementGroups/enableDemo-platform"
+      ]
+    }
+  ],
+  "outputs": {}
+}
