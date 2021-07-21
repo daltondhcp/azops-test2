@@ -29,7 +29,7 @@
           "$schema": "https://schema.management.azure.com/schemas/2019-08-01/tenantDeploymentTemplate.json#",
           "contentVersion": "1.0.0.0",
           "resources": [
-           {
+            {
               "type": "Microsoft.Management/managementGroups/subscriptions",
               "apiVersion": "2021-04-01",
               "name": "ctx01-connectivity/fd23378b-9b7f-4f73-b216-4dc4d09ecde7",

@@ -6,9 +6,9 @@
   "resources": [
     {
       "type": "Microsoft.Network/networkWatchers",
-      "name": "NetworkWatcher_westeurope",
-      "apiVersion": "2021-03-01",
-      "location": "westeurope",
+      "name": "NetworkWatcher_eastus",
+      "apiVersion": "2021-02-01",
+      "location": "eastus",
       "tags": null,
       "properties": {
         "runningOperationIds": []
