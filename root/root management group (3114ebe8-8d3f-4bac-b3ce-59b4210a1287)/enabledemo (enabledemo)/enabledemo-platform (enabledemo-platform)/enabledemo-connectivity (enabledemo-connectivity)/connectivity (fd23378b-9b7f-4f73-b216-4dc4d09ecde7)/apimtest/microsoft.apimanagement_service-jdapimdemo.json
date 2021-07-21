@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.ApiManagement/service",
+      "name": "jdapimdemo",
+      "apiVersion": "0000-00-00",
+      "location": "West Europe",
+      "tags": {},
+      "properties": {
+        "publisherEmail": "johan@dahlbom.eu",
+        "publisherName": "Jodahlbo",
+        "notificationSenderEmail": "apimgmt-noreply@mail.windowsazure.com",
+        "targetProvisioningState": "",
+        "gatewayUrl": "https://jdapimdemo.azure-api.net",
+        "gatewayRegionalUrl": null,
+        "portalUrl": null,
+        "developerPortalUrl": null,
+        "managementApiUrl": null,
+        "scmUrl": null,
+        "hostnameConfigurations": [
+          {
+            "type": "Proxy",
+            "hostName": "jdapimdemo.azure-api.net",
+            "encodedCertificate": null,
+            "keyVaultId": null,
+            "certificatePassword": null,
+            "negotiateClientCertificate": false,
+            "certificate": null,
+            "defaultSslBinding": true,
+            "identityClientId": null
+          }
+        ],
+        "publicIPAddresses": null,
+        "privateIPAddresses": null,
+        "additionalLocations": null,
+        "virtualNetworkConfiguration": null,
+        "customProperties": {
+          "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11": "false",
+          "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10": "false",
+          "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11": "false",
+          "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10": "false",
+          "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30": "false",
+          "Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2": "false"
+        },
+        "virtualNetworkType": "None",
+        "certificates": null,
+        "apiVersionConstraint": {
+          "minApiVersion": null
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}
