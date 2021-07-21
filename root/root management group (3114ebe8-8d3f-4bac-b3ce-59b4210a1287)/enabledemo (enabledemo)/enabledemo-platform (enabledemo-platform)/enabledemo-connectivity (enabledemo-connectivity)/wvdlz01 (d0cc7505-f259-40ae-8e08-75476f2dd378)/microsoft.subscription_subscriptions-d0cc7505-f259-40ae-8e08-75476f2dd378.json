@@ -6,7 +6,7 @@
   "resources": [
     {
       "type": "Microsoft.Management/managementGroups/subscriptions",
-      "name": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287/d0cc7505-f259-40ae-8e08-75476f2dd378",
+      "name": "enableDemo-connectivity/d0cc7505-f259-40ae-8e08-75476f2dd378",
       "apiVersion": "2021-04-01",
       "scope": "/"
     }
