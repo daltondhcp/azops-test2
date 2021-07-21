@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/virtualNetworks",
       "name": "ctx01-connectivity-vnet",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2021-03-01",
       "location": "westeurope",
       "tags": {},
       "properties": {
