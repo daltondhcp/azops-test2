@@ -165,7 +165,7 @@ jobs:
          $data = Import-PowerShellDataFile -Path $modu#e.Path
          foreach ($dependency in $data.RequiredModules) {
              Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
-        }
+         } 
         shell: pwsh
       #
       # Connect
