@@ -10,12 +10,12 @@
       "apiVersion": "2019-05-01",
       "location": "westeurope",
       "tags": {
-        "hey": "1234",
-        "Tag2": "tag2valeu",
-        "environment": "production",
         "CostCenter": "cheese",
-        "Tag3": "Tag3Value",
         "Tag1": "tag1value",
+        "Tag2": "tag2valeu",
+        "Tag3": "Tag3Value",
+        "environment": "production",
+        "hey": "1234",
         "serviceowner": "johan"
       },
       "properties": {}
