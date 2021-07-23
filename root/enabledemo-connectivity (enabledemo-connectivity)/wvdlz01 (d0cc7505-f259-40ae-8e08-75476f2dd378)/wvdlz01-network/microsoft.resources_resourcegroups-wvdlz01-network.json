@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "name": "wvdlz01-network",
+      "apiVersion": "2019-05-01",
+      "location": "westeurope",
+      "tags": {
+        "Tag3": "Tag3Value",
+        "environment": "production",
+        "Tag1": "tag1value",
+        "CostCenter": "cheese",
+        "Tag2": "tag2valeu",
+        "serviceowner": "johan",
+        "hey": "1234"
+      },
+      "properties": {}
+    }
+  ],
+  "outputs": {}
+}
