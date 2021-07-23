@@ -162,7 +162,7 @@ jobs:
          . .github/scripts/Install.ps1
          Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "rgordering"
          $module = Get-Module -Name AzOps -ListAvailable
-         $data = Import-PowerShellDataFile -Path $modu#e.Path
+         $data = Import-PowerShellDataFile -Path $module.Path
          foreach ($dependency in $data.RequiredModules) {
              Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
          } 
