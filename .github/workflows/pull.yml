@@ -160,7 +160,7 @@ jobs:
       - name: "Dependencies"
         run: |
          . .github/scripts/Install.ps1
-         Install-SourceModule -Repository "gbordier/AzOps" -Branch "daltondhcp:rgordering"
+         Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "daltondhcp:rgordering"
          $module = Get-Module -Name AzOps -ListAvailable
          $data = Import-PowerShellDataFile -Path $modu#e.Path
          foreach ($dependency in $data.RequiredModules) {
