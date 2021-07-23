@@ -22,7 +22,7 @@
             "Core.IgnoreContextCheck": false,
             "Core.InvalidateCache": true,
             "Core.OfferType": "MS-AZR-0017P",
-            "Core.PartialMgDiscoveryRoot": [],
+            "Core.PartialMgDiscoveryRoot": ["enableDemo-connectivity"],
             "Core.SkipPolicy": false,
             "Core.SkipResource": false,
             "Core.SkipResourceGroup": false,
