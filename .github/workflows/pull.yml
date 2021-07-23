@@ -166,7 +166,7 @@ jobs:
          foreach ($dependency in $data.RequiredModules) {
              Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
         }
-      shell: pwsh
+        shell: pwsh
       #
       # Connect
       # Authenticate Azure context
