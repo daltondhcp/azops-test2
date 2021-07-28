@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "microsoft.aadiam/privateLinkForAzureAD",
+      "name": "test",
+      "apiVersion": "0000-00-00",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "name": "test",
+        "allTenants": true,
+        "ownerTenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287",
+        "tenants": null,
+        "aadPolicyId": "8a9a0afe-3327-4567-9005-e6361be1e51b"
+      }
+    }
+  ],
+  "outputs": {}
+}
