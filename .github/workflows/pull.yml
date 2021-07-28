@@ -1,4 +1,4 @@
-#---
+##---
 name: "AzOps - Pull"
 
 on:
@@ -152,21 +152,21 @@ jobs:
       #
       # Dependencies
       # Install required runtime modules
-        
+   #    
+   #  - name: "Dependencies"
+   #    shell: pwsh
+   #    run: |
+   #      Install-Module -Name "AzOps" -Force
       - name: "Dependencies"
-        shell: pwsh
         run: |
-          Install-Module -Name "AzOps" -Force
-    #- name: "Dependencies"
-    #  run: |
-    #   . .github/scripts/Install.ps1
-    #   Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "rgordering"
-    #   $module = Get-Module -Name AzOps -ListAvailable
-    #   $data = Import-PowerShellDataFile -Path $module.Path
-    #   foreach ($dependency in $data.RequiredModules) {
-    #       Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
-    #   } 
-    #  shell: pwsh
+         . .github/scripts/Install.ps1
+         Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "feature/policyExemptions"
+         $module = Get-Module -Name AzOps -ListAvailable
+         $data = Import-PowerShellDataFile -Path $module.Path
+         foreach ($dependency in $data.RequiredModules) {
+             Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
+         } 
+        shell: pwsh
       #
       # Connect
       # Authenticate Azure context
