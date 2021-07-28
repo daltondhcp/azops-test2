@@ -17,6 +17,13 @@
           "capacity": null
         },
         "RegistrationUrl": "https://40a7f2b3-9131-4ada-b641-5e9c958830b5.agentsvc.we.azure-automation.net/accounts/40a7f2b3-9131-4ada-b641-5e9c958830b5",
+        "encryption": {
+          "keySource": "Microsoft.Automation",
+          "identity": {
+            "userAssignedIdentity": null
+          }
+        },
+        "privateEndpointConnections": [],
         "lastModifiedBy": null
       }
     }
