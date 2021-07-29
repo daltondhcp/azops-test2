@@ -1,6 +1,6 @@
 targetScope = 'managementGroup'
 
-param mgName string = 'm111-${uniqueString(newGuid())}'
+param mgName string = 'm114-${uniqueString(newGuid())}'
 
 resource newMG 'Microsoft.Management/managementGroups@2020-05-01' = {
   scope: tenant()
