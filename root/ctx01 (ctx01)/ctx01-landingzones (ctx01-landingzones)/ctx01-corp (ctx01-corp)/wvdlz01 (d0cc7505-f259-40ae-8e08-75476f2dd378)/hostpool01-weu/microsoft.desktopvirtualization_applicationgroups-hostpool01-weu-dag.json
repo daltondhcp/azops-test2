@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.DesktopVirtualization/applicationgroups",
+      "name": "hostpool01-weu-DAG",
+      "apiVersion": "2021-03-09-preview",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "hostPoolArmPath": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourcegroups/hostpool01-weu/providers/Microsoft.DesktopVirtualization/hostpools/hostpool01-weu",
+        "workspaceArmPath": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourcegroups/hostpool01-weu/providers/Microsoft.DesktopVirtualization/workspaces/Workspace01",
+        "description": "Desktop Application Group created through the Hostpool Wizard",
+        "friendlyName": "Default Desktop",
+        "applicationGroupType": "Desktop",
+        "migrationRequest": null,
+        "cloudPcResource": false,
+        "objectId": "4b98200e-137a-4b12-b81b-2dcaa2d7b669"
+      }
+    }
+  ],
+  "outputs": {}
+}
