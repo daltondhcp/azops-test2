@@ -1,8 +1,7 @@
-##---
+---
 name: "AzOps - Pull"
 
 on:
-
   #
   # Workflow Dispatch
   # This is to invoke the action from the GitHub UI
@@ -47,7 +46,6 @@ on:
       - completed
 
 env:
-
   #
   # Credentials
   #
@@ -96,7 +94,7 @@ env:
 
   #
   # Pull Request
-  # The generated Pull Request for the Pull workflow can be
+  # The generated Pull Request for the Pull workflow can be
   # modified to help indicate when changes we're merged in the
   # Git history.
   #
@@ -106,39 +104,22 @@ env:
   pull_request: "Automated State"
 
 jobs:
-
- workflow_run_info:
-  name: Information about the workflow run
-  runs-on: ubuntu-latest
-  env:
-    GITHUB_CONTEXT: ${{ toJson(github) }}
-  steps:
-    - name: Show Information
-      run: |
-        echo "This workflow run is triggered by ${{ github.event_name }} ."
-        echo " *****************************************************************************"
-        echo "$GITHUB_CONTEXT"
-        echo " *****************************************************************************"
-  
- pull:
-
+  pull:
     #
     # Pull
     #
 
     name: "Pull"
     runs-on: ubuntu-20.04
-    
+
     #
     # Only run Pull after successful Push or on manually triggered/scheduled events
     #
 
     if: ${{ github.event.workflow_run.conclusion == 'success' ||
-        contains(fromJson('["schedule", "workflow_dispatch", "repository_dispatch"]'), github.event_name) }}
+      contains(fromJson('["schedule", "workflow_dispatch", "repository_dispatch"]'), github.event_name) }}
 
-        
     steps:
-
       #
       # Checkout
       # Checks-out the repository
@@ -173,21 +154,13 @@ jobs:
       #
       # Dependencies
       # Install required runtime modules
-   #    
-   #  - name: "Dependencies"
-   #    shell: pwsh
-   #    run: |
-   #      Install-Module -Name "AzOps" -Force
+      #
+
       - name: "Dependencies"
-        run: |
-         . .github/scripts/Install.ps1
-         Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "feature/policyExemptions"
-         $module = Get-Module -Name AzOps -ListAvailable
-         $data = Import-PowerShellDataFile -Path $module.Path
-         foreach ($dependency in $data.RequiredModules) {
-             Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
-         } 
         shell: pwsh
+        run: |
+          Install-Module -Name "AzOps" -Force
+
       #
       # Connect
       # Authenticate Azure context
@@ -211,7 +184,7 @@ jobs:
           if ($env:ACTION -eq "Enterprise-Scale Deployment") {
             Set-PSFConfig -FullName AzOps.Core.SkipResource -Value $false
           }
-          Initialize-AzOpsRepository -Rebuild
+          Invoke-AzOpsPull -Rebuild
           Get-Job | Remove-Job -Force
         env:
           ACTION: ${{ github.event.action }}
@@ -255,7 +228,6 @@ jobs:
         shell: bash
         run: |
           git commit -m "${{ env.commit_message }}"
-
 
       #
       # Push
