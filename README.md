@@ -22,7 +22,7 @@ Please be aware the Wiki has been migrated to the AzOps repository.
 * [GitHub Actions](https://github.com/Azure/AzOps-Accelerator/tree/main/.github/)
 * [Azure Pipelines](https://github.com/Azure/AzOps-Accelerator/tree/main/.pipelines/)
 
-### Issues
+### Issues 
 
 If you find any bugs when using the Accelerator, please file an issue on our [AzOps issue](https://github.com/azure/azops/issues) page.
 
