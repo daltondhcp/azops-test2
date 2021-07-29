@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyExemptions",
+      "name": "1ceb08a16ef24f6c80d0b871",
+      "apiVersion": "2020-07-01-preview",
+      "properties": {
+        "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/ctx01/providers/Microsoft.Authorization/policyAssignments/Deploy-ASC-Security",
+        "PolicyDefinitionReferenceIds": [],
+        "ExemptionCategory": "Waiver",
+        "DisplayName": "ctx01 - Deploy-ASC-Defender",
+        "Description": "We need this!",
+        "ExpiresOn": null
+      }
+    }
+  ],
+  "outputs": {}
+}
