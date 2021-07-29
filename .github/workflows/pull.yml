@@ -107,7 +107,20 @@ env:
 
 jobs:
 
-  pull:
+ workflow_run_info:
+  name: Information about the workflow run
+  runs-on: ubuntu-latest
+  env:
+    GITHUB_CONTEXT: ${{ toJson(github) }}
+  steps:
+    - name: Show Information
+      run: |
+        echo "This workflow run is triggered by ${{ github.event_name }} ."
+        echo " *****************************************************************************"
+        echo "$GITHUB_CONTEXT"
+        echo " *****************************************************************************"
+  
+ pull:
 
     #
     # Pull
@@ -115,7 +128,9 @@ jobs:
 
     name: "Pull"
     runs-on: ubuntu-20.04
-
+    if: ${{ github.event.workflow_run.conclusion == 'success' }} ||
+        
+    
     steps:
 
       #
