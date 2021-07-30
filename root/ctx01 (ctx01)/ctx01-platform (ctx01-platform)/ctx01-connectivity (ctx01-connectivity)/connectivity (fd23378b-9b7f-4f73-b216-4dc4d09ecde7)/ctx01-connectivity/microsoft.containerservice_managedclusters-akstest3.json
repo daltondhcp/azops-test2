@@ -29,7 +29,7 @@
             "kubeletDiskType": "OS",
             "maxPods": 110,
             "type": "VirtualMachineScaleSets",
-            "provisioningState": "Succeeded",
+            "provisioningState": "Deleting",
             "powerState": {
               "code": "Running"
             },

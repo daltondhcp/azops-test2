@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/networkInterfaces",
       "name": "test.nic.1202c3e0-cae2-4591-aec1-da7b1c853365",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2021-03-01",
       "location": "eastus",
       "tags": {},
       "properties": {

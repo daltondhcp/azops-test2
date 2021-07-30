@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/networkInterfaces",
       "name": "test60",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2021-03-01",
       "location": "westeurope",
       "tags": null,
       "properties": {

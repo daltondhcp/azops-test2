@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/applicationGateways",
       "name": "test",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2021-03-01",
       "location": "westeurope",
       "tags": {},
       "properties": {
@@ -20,9 +20,9 @@
           {
             "name": "appGatewayIpConfig",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/gatewayIPConfigurations/appGatewayIpConfig",
-            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "etag": "W/\"272a1d18-bedb-4b74-9bdc-1ea37ece0b28\"",
             "properties": {
-              "provisioningState": "Succeeded",
+              "provisioningState": "Deleting",
               "subnet": {
                 "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/virtualNetworks/ctx01-hub-westeurope/subnets/appgw"
               }
@@ -38,10 +38,10 @@
           {
             "name": "appGwPublicFrontendIp",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/frontendIPConfigurations/appGwPublicFrontendIp",
-            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "etag": "W/\"272a1d18-bedb-4b74-9bdc-1ea37ece0b28\"",
             "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
             "properties": {
-              "provisioningState": "Succeeded",
+              "provisioningState": "Deleting",
               "privateIPAllocationMethod": "Dynamic",
               "publicIPAddress": {
                 "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/publicIPAddresses/appgw"
@@ -58,9 +58,9 @@
           {
             "name": "port_80",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/frontendPorts/port_80",
-            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "etag": "W/\"272a1d18-bedb-4b74-9bdc-1ea37ece0b28\"",
             "properties": {
-              "provisioningState": "Succeeded",
+              "provisioningState": "Deleting",
               "port": 80,
               "httpListeners": [
                 {
@@ -75,9 +75,9 @@
           {
             "name": "dummy",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/backendAddressPools/dummy",
-            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "etag": "W/\"272a1d18-bedb-4b74-9bdc-1ea37ece0b28\"",
             "properties": {
-              "provisioningState": "Succeeded",
+              "provisioningState": "Deleting",
               "backendAddresses": [],
               "requestRoutingRules": [
                 {
@@ -93,9 +93,9 @@
           {
             "name": "test",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/backendHttpSettingsCollection/test",
-            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "etag": "W/\"272a1d18-bedb-4b74-9bdc-1ea37ece0b28\"",
             "properties": {
-              "provisioningState": "Succeeded",
+              "provisioningState": "Deleting",
               "port": 80,
               "protocol": "Http",
               "cookieBasedAffinity": "Disabled",
@@ -114,9 +114,9 @@
           {
             "name": "test",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/httpListeners/test",
-            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "etag": "W/\"272a1d18-bedb-4b74-9bdc-1ea37ece0b28\"",
             "properties": {
-              "provisioningState": "Succeeded",
+              "provisioningState": "Deleting",
               "frontendIPConfiguration": {
                 "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/frontendIPConfigurations/appGwPublicFrontendIp"
               },
@@ -140,9 +140,9 @@
           {
             "name": "test",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/requestRoutingRules/test",
-            "etag": "W/\"3acc328c-f537-4f58-a16e-6350184fe4e1\"",
+            "etag": "W/\"272a1d18-bedb-4b74-9bdc-1ea37ece0b28\"",
             "properties": {
-              "provisioningState": "Succeeded",
+              "provisioningState": "Deleting",
               "ruleType": "Basic",
               "httpListener": {
                 "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/applicationGateways/test/httpListeners/test"

@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/privateEndpoints",
       "name": "test",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2021-03-01",
       "location": "eastus",
       "tags": {},
       "properties": {
@@ -15,9 +15,9 @@
           {
             "name": "test_6363c22f-15e7-4686-9591-85ba09b0f00e",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/privateEndpoints/test/privateLinkServiceConnections/test_6363c22f-15e7-4686-9591-85ba09b0f00e",
-            "etag": "W/\"9c2af122-e4e7-43d1-9247-e45f25f26646\"",
+            "etag": "W/\"c3066711-13b9-4edb-97f6-912e566ab609\"",
             "properties": {
-              "provisioningState": "Succeeded",
+              "provisioningState": "Deleting",
               "privateLinkServiceId": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourcegroups/ctx01-connectivity/providers/Microsoft.ContainerRegistry/registries/testwerwer",
               "groupIds": [
                 "registry"
@@ -35,6 +35,7 @@
         "subnet": {
           "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/MC_ctx01-connectivity_testcluster1_eastus/providers/Microsoft.Network/virtualNetworks/aks-vnet-32944851/subnets/aks-subnet"
         },
+        "ipConfigurations": [],
         "networkInterfaces": [
           {
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/ctx01-connectivity/providers/Microsoft.Network/networkInterfaces/test.nic.1202c3e0-cae2-4591-aec1-da7b1c853365"
