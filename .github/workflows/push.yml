@@ -76,11 +76,17 @@ jobs:
           sudo mv ./bicep.bin /usr/local/bin/bicep
           bicep --version
         shell: bash
-      #
+    #
       # Connect
       # Authenticate Azure context
       #
 
+      - name: "Connect"
+        shell: pwsh
+        run: |
+          $credential = New-Object PSCredential -ArgumentList $env:ARM_CLIENT_ID, (ConvertTo-SecureString -String $env:ARM_CLIENT_SECRET -AsPlainText -Force)
+          Connect-AzAccount -TenantId $env:ARM_TENANT_ID -ServicePrincipal -Credential $credential -SubscriptionId $env:ARM_SUBSCRIPTION_ID
+      #
              #- name: "Dependencies"
      #  run: |
      #    Install-Module -Name "AzOps" -Force
