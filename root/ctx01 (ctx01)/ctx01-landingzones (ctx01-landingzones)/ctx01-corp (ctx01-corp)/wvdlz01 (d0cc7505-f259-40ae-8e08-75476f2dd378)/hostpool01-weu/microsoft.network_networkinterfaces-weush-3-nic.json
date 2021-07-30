@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/networkInterfaces",
       "name": "weush-3-nic",
-      "apiVersion": "2021-03-01",
+      "apiVersion": "2021-02-01",
       "location": "westeurope",
       "tags": {},
       "properties": {
