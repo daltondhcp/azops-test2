@@ -34,7 +34,7 @@
               "2",
               "3"
             ],
-            "provisioningState": "Succeeded",
+            "provisioningState": "Deleting",
             "powerState": {
               "code": "Running"
             },
