@@ -31,8 +31,6 @@
               "routeTable": {},
               "ipConfigurations": [
                 {},
-                {},
-                {},
                 {}
               ],
               "privateEndpoints": [
@@ -51,7 +49,7 @@
           {
             "name": "peerToHub",
             "properties": {
-              "peeringState": "Connected",
+              "peeringState": "Disconnected",
               "peeringSyncLevel": "FullyInSync",
               "remoteVirtualNetwork": {},
               "allowVirtualNetworkAccess": true,
