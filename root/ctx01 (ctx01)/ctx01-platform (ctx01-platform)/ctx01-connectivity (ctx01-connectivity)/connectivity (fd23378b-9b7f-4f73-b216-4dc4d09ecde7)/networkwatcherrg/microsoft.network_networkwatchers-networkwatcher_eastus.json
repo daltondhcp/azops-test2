@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/networkWatchers",
       "name": "NetworkWatcher_eastus",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2021-03-01",
       "location": "eastus",
       "tags": null,
       "properties": {
