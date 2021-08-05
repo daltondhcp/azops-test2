@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/virtualNetworks",
       "name": "wvdlz01-westeurope-vnet",
-      "apiVersion": "2021-03-01",
+      "apiVersion": "2021-02-01",
       "location": "westeurope",
       "tags": null,
       "properties": {
