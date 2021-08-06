@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/routeTables",
       "name": "wvdlz01-westeurope-vnet-udr",
-      "apiVersion": "2021-03-01",
+      "apiVersion": "2021-02-01",
       "location": "westeurope",
       "tags": null,
       "properties": {
