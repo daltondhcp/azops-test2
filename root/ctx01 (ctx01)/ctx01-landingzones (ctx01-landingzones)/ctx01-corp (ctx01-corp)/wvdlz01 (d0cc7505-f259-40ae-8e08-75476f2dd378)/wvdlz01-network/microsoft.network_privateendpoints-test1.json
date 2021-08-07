@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Network/privateEndpoints",
       "name": "test1",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2021-03-01",
       "location": "westeurope",
       "tags": {},
       "properties": {
@@ -35,6 +35,7 @@
         "subnet": {
           "id": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourceGroups/wvdlz01-network/providers/Microsoft.Network/virtualNetworks/wvdlz01-westeurope-vnet/subnets/sessionhost01"
         },
+        "ipConfigurations": [],
         "networkInterfaces": [
           {
             "id": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourceGroups/wvdlz01-network/providers/Microsoft.Network/networkInterfaces/test1.nic.f855a537-fe16-4585-ab62-fa1372c2782f"
