@@ -43,6 +43,7 @@
         },
         "macAddress": "",
         "enableAcceleratedNetworking": false,
+        "vnetEncryptionSupported": false,
         "enableIPForwarding": false,
         "hostedWorkloads": [],
         "tapConfigurations": [],
