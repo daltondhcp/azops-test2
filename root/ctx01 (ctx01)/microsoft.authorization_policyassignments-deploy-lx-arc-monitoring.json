@@ -19,7 +19,7 @@
         "NotScopes": null,
         "DisplayName": "Deploy-Linux-Arc-Monitoring",
         "Description": "Deploy-Linux-Arc-Monitoring",
-        "EnforcementMode": "Default",
+        "EnforcementMode": "DoNotEnforce",
         "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d2b61b4-1d14-4a63-be30-d4498e7ad2cf",
         "Parameters": {
           "logAnalytics": {
