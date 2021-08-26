@@ -45,33 +45,7 @@
             "type": "Microsoft.Network/virtualNetworks/subnets"
           }
         ],
-        "virtualNetworkPeerings": [
-          {
-            "name": "peerToHub",
-            "properties": {
-              "peeringState": "Disconnected",
-              "peeringSyncLevel": "FullyInSync",
-              "remoteVirtualNetwork": {},
-              "allowVirtualNetworkAccess": true,
-              "allowForwardedTraffic": true,
-              "allowGatewayTransit": true,
-              "useRemoteGateways": false,
-              "doNotVerifyRemoteGateways": false,
-              "remoteAddressSpace": {
-                "addressPrefixes": [
-                  "10.100.0.0/16"
-                ]
-              },
-              "remoteVirtualNetworkAddressSpace": {
-                "addressPrefixes": [
-                  "10.100.0.0/16"
-                ]
-              },
-              "routeServiceVips": {}
-            },
-            "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
-          }
-        ],
+        "virtualNetworkPeerings": [],
         "enableDdosProtection": false
       }
     }
