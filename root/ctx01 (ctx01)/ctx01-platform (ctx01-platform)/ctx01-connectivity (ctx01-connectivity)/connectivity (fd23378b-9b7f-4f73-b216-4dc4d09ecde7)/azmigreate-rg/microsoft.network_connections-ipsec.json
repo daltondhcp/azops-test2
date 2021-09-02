@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/connections",
+      "name": "ipsec",
+      "apiVersion": "2021-03-01",
+      "location": "westeurope",
+      "tags": null,
+      "properties": {
+        "packetCaptureDiagnosticState": "None",
+        "virtualNetworkGateway1": {
+          "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/virtualNetworkGateways/vpngw"
+        },
+        "localNetworkGateway2": {
+          "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/localNetworkGateways/chaspergw"
+        },
+        "connectionType": "IPsec",
+        "connectionProtocol": "IKEv2",
+        "routingWeight": 0,
+        "sharedKey": "TrustMe!234",
+        "enableBgp": false,
+        "useLocalAzureIpAddress": false,
+        "usePolicyBasedTrafficSelectors": false,
+        "ipsecPolicies": [],
+        "trafficSelectorPolicies": [],
+        "connectionStatus": "Connected",
+        "ingressBytesTransferred": 18507,
+        "egressBytesTransferred": 108620,
+        "expressRouteGatewayBypass": false,
+        "dpdTimeoutSeconds": 0,
+        "connectionMode": "Default"
+      }
+    }
+  ],
+  "outputs": {}
+}

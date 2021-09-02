@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Migrate/MigrateProjects",
+      "name": "miggo1",
+      "apiVersion": "0000-00-00",
+      "location": "westeurope",
+      "tags": {
+        "Migrate Project": "miggo1"
+      },
+      "properties": {
+        "utilityStorageAccountId": null,
+        "publicNetworkAccess": "Enabled",
+        "privateEndpointConnections": [
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Migrate/MigrateProjects/miggo1/privateEndpointConnections/miggo11934pe.d8837121-e49e-418b-ae95-26e9c49850b5",
+            "name": "miggo11934pe.d8837121-e49e-418b-ae95-26e9c49850b5",
+            "type": "Microsoft.Migrate/MigrateProjects/privateEndpointConnections",
+            "eTag": "\"0900a508-0000-0d00-0000-6130f0fd0000\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "privateEndpoint": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/privateEndpoints/miggo11934pe"
+              },
+              "privateLinkServiceConnectionState": {
+                "status": "Approved",
+                "description": null,
+                "actionsRequired": ""
+              }
+            }
+          }
+        ],
+        "registeredTools": [],
+        "serviceEndpoint": "https://0e4ae852-8ba1-4c15-baa3-5bb7faaf894d-isv.we.hub.privatelink.prod.migration.windowsazure.com/resources/0e4ae852-8ba1-4c15-baa3-5bb7faaf894d",
+        "summary": {
+          "servers": {
+            "instanceType": "Servers",
+            "discoveredCount": 0,
+            "assessedCount": 0,
+            "replicatingCount": 0,
+            "testMigratedCount": 0,
+            "migratedCount": 0,
+            "refreshSummaryState": "Completed",
+            "extendedSummary": {
+              "microsoftDiscoveredCount": "0",
+              "microsoftMachinesCount": "0"
+            }
+          },
+          "databases": {
+            "instanceType": "Databases",
+            "refreshSummaryState": "Completed",
+            "extendedSummary": {}
+          },
+          "webApplications": {
+            "instanceType": "WebApplications",
+            "refreshSummaryState": "Completed",
+            "extendedSummary": {}
+          },
+          "desktopVirtualization": {
+            "instanceType": "DesktopVirtualization",
+            "refreshSummaryState": "Completed",
+            "extendedSummary": {}
+          }
+        },
+        "refreshSummaryState": "Completed"
+      }
+    }
+  ],
+  "outputs": {}
+}

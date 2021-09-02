@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/privateEndpoints",
+      "name": "miggo1-migratevault-176691438pe",
+      "apiVersion": "2021-03-01",
+      "location": "westeurope",
+      "tags": {
+        "MigrateProject": "miggo1"
+      },
+      "properties": {
+        "privateLinkServiceConnections": [
+          {
+            "name": "miggo1-migratevault-176691438pe",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/privateEndpoints/miggo1-migratevault-176691438pe/privateLinkServiceConnections/miggo1-migratevault-176691438pe",
+            "etag": "W/\"181fbf14-e5b6-493c-9233-d00927a640f6\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "privateLinkServiceId": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.RecoveryServices/vaults/miggo1-MigrateVault-176698193",
+              "groupIds": [
+                "AzureSiteRecovery"
+              ],
+              "privateLinkServiceConnectionState": {
+                "status": "Approved",
+                "description": "Auto Approved Request.",
+                "actionsRequired": "None"
+              }
+            },
+            "type": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections"
+          }
+        ],
+        "manualPrivateLinkServiceConnections": [],
+        "subnet": {
+          "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/virtualNetworks/bypass-vnet/subnets/default"
+        },
+        "ipConfigurations": [],
+        "networkInterfaces": [
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/networkInterfaces/miggo1-migratevault-176691438pe.nic.c592e8b6-92a3-4115-931b-0c796f0b5255"
+          }
+        ],
+        "customDnsConfigs": []
+      }
+    }
+  ],
+  "outputs": {}
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/privateEndpoints",
+      "name": "miggo11934pe",
+      "apiVersion": "2021-03-01",
+      "location": "westeurope",
+      "tags": {
+        "MigrateProject": "miggo1"
+      },
+      "properties": {
+        "privateLinkServiceConnections": [
+          {
+            "name": "miggo11934pe",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/privateEndpoints/miggo11934pe/privateLinkServiceConnections/miggo11934pe",
+            "etag": "W/\"433efb7e-95de-4a8d-98ec-4dd7a49f71d9\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "privateLinkServiceId": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Migrate/MigrateProjects/miggo1",
+              "groupIds": [
+                "Default"
+              ],
+              "privateLinkServiceConnectionState": {
+                "status": "Approved",
+                "description": "",
+                "actionsRequired": ""
+              }
+            },
+            "type": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections"
+          }
+        ],
+        "manualPrivateLinkServiceConnections": [],
+        "subnet": {
+          "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/virtualNetworks/bypass-vnet/subnets/default"
+        },
+        "ipConfigurations": [],
+        "networkInterfaces": [
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/networkInterfaces/miggo11934pe.nic.2a2532ef-c3db-497a-b92e-9c5784fc6758"
+          }
+        ],
+        "customDnsConfigs": []
+      }
+    }
+  ],
+  "outputs": {}
+}
