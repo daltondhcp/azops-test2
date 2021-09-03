@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.Migrate/MigrateProjects",
       "name": "miggo1",
-      "apiVersion": "0000-00-00",
+      "apiVersion": "2020-06-01-preview",
       "location": "westeurope",
       "tags": {
         "Migrate Project": "miggo1"
@@ -34,20 +34,22 @@
             }
           }
         ],
-        "registeredTools": [],
+        "registeredTools": [
+          "ServerMigration_Replication"
+        ],
         "serviceEndpoint": "https://0e4ae852-8ba1-4c15-baa3-5bb7faaf894d-isv.we.hub.privatelink.prod.migration.windowsazure.com/resources/0e4ae852-8ba1-4c15-baa3-5bb7faaf894d",
         "summary": {
           "servers": {
             "instanceType": "Servers",
-            "discoveredCount": 0,
+            "discoveredCount": 1,
             "assessedCount": 0,
             "replicatingCount": 0,
             "testMigratedCount": 0,
             "migratedCount": 0,
             "refreshSummaryState": "Completed",
             "extendedSummary": {
-              "microsoftDiscoveredCount": "0",
-              "microsoftMachinesCount": "0"
+              "microsoftDiscoveredCount": "1",
+              "microsoftMachinesCount": "1"
             }
           },
           "databases": {

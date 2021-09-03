@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "name": "centralcacheaccount",
+      "apiVersion": "2021-06-01",
+      "location": "northeurope",
+      "tags": {},
+      "properties": {
+        "defaultToOAuthAuthentication": false,
+        "keyCreationTime": {
+          "key1": "2021-09-02T19:01:42.5447917Z",
+          "key2": "2021-09-02T19:01:42.5447917Z"
+        },
+        "privateEndpointConnections": [
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Storage/storageAccounts/centralcacheaccount/privateEndpointConnections/centralcacheaccount.69dfe86d-e0d2-41de-9354-3c04064e6360",
+            "name": "centralcacheaccount.69dfe86d-e0d2-41de-9354-3c04064e6360",
+            "type": "Microsoft.Storage/storageAccounts/privateEndpointConnections",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "privateEndpoint": {
+                "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/privateEndpoints/cachenic"
+              },
+              "privateLinkServiceConnectionState": {
+                "status": "Approved",
+                "description": "Auto-Approved",
+                "actionRequired": "None"
+              }
+            }
+          }
+        ],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": true,
+        "allowSharedKeyAccess": true,
+        "networkAcls": {
+          "bypass": "AzureServices",
+          "virtualNetworkRules": [],
+          "ipRules": [],
+          "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+          "services": {
+            "file": {
+              "keyType": "Account",
+              "enabled": true
+            },
+            "blob": {
+              "keyType": "Account",
+              "enabled": true
+            }
+          },
+          "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot",
+        "secondaryLocation": "westeurope",
+        "statusOfSecondary": "available",
+        "secondaryEndpoints": {
+          "dfs": "https://centralcacheaccount-secondary.dfs.core.windows.net/",
+          "web": "https://centralcacheaccount-secondary.z16.web.core.windows.net/",
+          "blob": "https://centralcacheaccount-secondary.blob.core.windows.net/",
+          "queue": "https://centralcacheaccount-secondary.queue.core.windows.net/",
+          "table": "https://centralcacheaccount-secondary.table.core.windows.net/"
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

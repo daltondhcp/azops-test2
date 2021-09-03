@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.RecoveryServices/vaults",
       "name": "miggo1-MigrateVault-176698193",
-      "apiVersion": "0000-00-00",
+      "apiVersion": "2021-07-01",
       "location": "northeurope",
       "tags": {
         "Migrate Project": "miggo1"

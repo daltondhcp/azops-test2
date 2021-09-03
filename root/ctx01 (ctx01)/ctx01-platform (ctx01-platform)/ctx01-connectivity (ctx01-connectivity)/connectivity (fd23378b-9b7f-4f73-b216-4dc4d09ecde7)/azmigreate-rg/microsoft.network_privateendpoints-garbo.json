@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/privateEndpoints",
+      "name": "garbo",
+      "apiVersion": "2021-03-01",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "privateLinkServiceConnections": [
+          {
+            "name": "garbo",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/privateEndpoints/garbo/privateLinkServiceConnections/garbo",
+            "etag": "W/\"7f8c79a5-efcf-4589-b3d3-4002c26b69c2\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "privateLinkServiceId": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourceGroups/azmigtarget-rg/providers/Microsoft.Storage/storageAccounts/garbageo",
+              "groupIds": [
+                "blob"
+              ],
+              "privateLinkServiceConnectionState": {
+                "status": "Approved",
+                "description": "Auto-Approved",
+                "actionsRequired": "None"
+              }
+            },
+            "type": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections"
+          }
+        ],
+        "manualPrivateLinkServiceConnections": [],
+        "subnet": {
+          "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/virtualNetworks/bypass-vnet/subnets/default"
+        },
+        "ipConfigurations": [],
+        "networkInterfaces": [
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/networkInterfaces/garbo.nic.147933b5-2d40-4812-bc16-6c8b922b5b7d"
+          }
+        ],
+        "customDnsConfigs": []
+      }
+    }
+  ],
+  "outputs": {}
+}
