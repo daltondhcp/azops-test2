@@ -33,8 +33,8 @@
         "ipsecPolicies": [],
         "trafficSelectorPolicies": [],
         "connectionStatus": "Connected",
-        "ingressBytesTransferred": 61644815,
-        "egressBytesTransferred": 3811673,
+        "ingressBytesTransferred": 82484642,
+        "egressBytesTransferred": 4949406,
         "expressRouteGatewayBypass": false,
         "dpdTimeoutSeconds": 0,
         "connectionMode": "Default"
