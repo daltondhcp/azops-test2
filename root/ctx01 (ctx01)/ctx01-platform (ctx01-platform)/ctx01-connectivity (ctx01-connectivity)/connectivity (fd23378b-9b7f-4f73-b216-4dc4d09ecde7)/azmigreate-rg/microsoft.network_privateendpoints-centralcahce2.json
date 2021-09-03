@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/privateEndpoints",
+      "name": "centralcahce2",
+      "apiVersion": "2021-03-01",
+      "location": "westeurope",
+      "tags": {},
+      "properties": {
+        "privateLinkServiceConnections": [
+          {
+            "name": "centralcahce2",
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/privateEndpoints/centralcahce2/privateLinkServiceConnections/centralcahce2",
+            "etag": "W/\"d4dbea72-0221-425e-b835-c4f66bd79a32\"",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "privateLinkServiceId": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Storage/storageAccounts/centralcache2",
+              "groupIds": [
+                "blob"
+              ],
+              "privateLinkServiceConnectionState": {
+                "status": "Approved",
+                "description": "Auto-Approved",
+                "actionsRequired": "None"
+              }
+            },
+            "type": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections"
+          }
+        ],
+        "manualPrivateLinkServiceConnections": [],
+        "subnet": {
+          "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/virtualNetworks/bypass-vnet/subnets/default"
+        },
+        "ipConfigurations": [],
+        "networkInterfaces": [
+          {
+            "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/azmigreate-rg/providers/Microsoft.Network/networkInterfaces/centralcahce2.nic.80f433f6-5961-4ff5-9685-47d102711a61"
+          }
+        ],
+        "customDnsConfigs": []
+      }
+    }
+  ],
+  "outputs": {}
+}
