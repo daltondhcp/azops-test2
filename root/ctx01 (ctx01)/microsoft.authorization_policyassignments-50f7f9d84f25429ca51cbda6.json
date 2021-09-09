@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "50f7f9d84f25429ca51cbda6",
+      "apiVersion": "2021-06-01",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned",
+        "principalId": "838b8d01-4002-4018-a929-efd45840c459",
+        "tenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287"
+      },
+      "properties": {
+        "Scope": "/providers/Microsoft.Management/managementGroups/ctx01",
+        "NotScopes": [],
+        "DisplayName": "Deploy-DNSZoneGroup-AKS",
+        "Description": "",
+        "EnforcementMode": "Default",
+        "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/ctx01/providers/Microsoft.Authorization/policyDefinitions/e9bfbd62-c238-4af8-9249-ffac795a5497",
+        "Parameters": {
+          "privateDnsZoneId": {
+            "value": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourcegroups/ctx01-connectivity/providers/microsoft.network/privatednszones/privatelink.westeurope.azmk8s.io"
+          }
+        },
+        "NonComplianceMessages": [
+          {
+            "Message": "ThisIsANonComplianceMessage",
+            "PolicyDefinitionReferenceId": null
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": {}
+}
