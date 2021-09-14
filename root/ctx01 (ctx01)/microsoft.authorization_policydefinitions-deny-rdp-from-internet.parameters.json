@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "This policy denies any network security rule that allows RDP access from Internet",
           "DisplayName": "RDP access from the Internet should be blocked",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "All",
           "Parameters": {
             "effect": {

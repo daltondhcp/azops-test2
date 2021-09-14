@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Depoloys a default budget on subscriptions.",
           "DisplayName": "Deploy a default budget on subscriptions",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Budget"
+          },
           "Mode": "All",
           "Parameters": {
             "amount": {

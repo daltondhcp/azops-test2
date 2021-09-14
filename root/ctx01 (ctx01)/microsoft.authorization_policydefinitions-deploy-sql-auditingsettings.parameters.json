@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploy auditing settings to SQL Database when it not exist in the deployment",
           "DisplayName": "Deploy SQL database auditing settings",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "SQL"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "effect": {

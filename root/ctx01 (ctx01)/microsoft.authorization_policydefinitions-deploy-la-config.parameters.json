@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploy the configurations to the Log Analytics in the subscription. This includes a list of solutions like update, automation etc and  enables the vminsight counters. ",
           "DisplayName": "Deploy the configurations to the Log Analytics in the subscription",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Monitoring"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "workspaceName": {

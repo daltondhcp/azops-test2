@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploys Azure Firewall Manager policy in subscription where the policy is assigned.",
           "DisplayName": "Deploy Azure Firewall Manager policy in the subscription",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "fwpolicy": {

@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploys Virtual Network to be used as hub virtual network in desired region in the subscription where this policy is assigned.",
           "DisplayName": "Deploy Virtual Network to be used as hub virtual network in desired region",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "hubName": {

@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploy the Virtual WAN in the specific region.",
           "DisplayName": "Deploy the Virtual WAN in the specific region",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "vwanname": {

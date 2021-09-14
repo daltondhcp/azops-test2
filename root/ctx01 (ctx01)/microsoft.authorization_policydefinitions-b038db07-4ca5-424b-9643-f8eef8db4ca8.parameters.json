@@ -9,6 +9,9 @@
         "Properties": {
           "Description": null,
           "DisplayName": "Deny Subnet without NSG",
+          "Metadata": {
+            "category": "Network"
+          },
           "Mode": "All",
           "Parameters": {},
           "PolicyRule": {

@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "This policy denies creation of MySql DB accounts with exposed public endpoints",
           "DisplayName": "Public network access should be disabled for MySQL",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "SQL"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "effect": {

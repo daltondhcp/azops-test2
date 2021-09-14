@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "This policy denies the creation of Maria DB accounts with exposed public endpoints",
           "DisplayName": "Public network access should be disabled for MariaDB",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "SQL"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "effect": {

@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploys the diagnostic settings for WVD Host Pools to stream to a Log Analytics workspace when any Host Pools which is missing this diagnostic settings is created or updated. The policy wil  set the diagnostic with all and categorys enabled.",
           "DisplayName": "Deploy Diagnostic Settings for WVD Host Pools to Log Analytics workspace",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Monitoring"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "logAnalytics": {

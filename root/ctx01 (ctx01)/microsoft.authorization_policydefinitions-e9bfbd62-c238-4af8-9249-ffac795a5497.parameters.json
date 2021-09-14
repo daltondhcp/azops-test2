@@ -9,6 +9,7 @@
         "Properties": {
           "Description": null,
           "DisplayName": "Deploy-DNSZoneGroup-AKS",
+          "Metadata": {},
           "Mode": "Indexed",
           "Parameters": {
             "privateDnsZoneId": {

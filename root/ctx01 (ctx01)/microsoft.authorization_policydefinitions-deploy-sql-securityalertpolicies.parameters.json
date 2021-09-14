@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploy the security Alert Policies configuration with email admin accounts when it not exist in current configuration",
           "DisplayName": "Deploy SQL Database security Alert Policies configuration with email admin accounts",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "SQL"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "effect": {
