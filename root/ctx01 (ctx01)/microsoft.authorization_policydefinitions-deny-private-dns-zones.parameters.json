@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "This policy denies the creation of a private DNS in the current scope, used in combination with policies that create centralized private DNS in connectivity subscription",
           "DisplayName": "Deny the creation of private DNS",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "effect": {

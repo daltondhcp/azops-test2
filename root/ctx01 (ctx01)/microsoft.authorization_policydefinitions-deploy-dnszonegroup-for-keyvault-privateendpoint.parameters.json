@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploys the configurations of a Private DNS Zone Group by a parameter for Key Vault Private Endpoint. Used enforce the configuration to a single Private DNS Zone. ",
           "DisplayName": "Deploy DNS  Zone Group for Key Vault Private Endpoint",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "privateDnsZoneId": {

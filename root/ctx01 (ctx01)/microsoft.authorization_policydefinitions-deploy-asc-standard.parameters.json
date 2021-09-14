@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploys  the Azure Defender settings in Azure Security Center for  the specific services.",
           "DisplayName": "Deploy Azure Defender settings in Azure Security Center.",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Security Center"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "pricingTierVMs": {

@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploys the diagnostic settings for SQL Databases to stream to a Log Analytics workspace when any SQL Databases  which is missing this diagnostic settings is created or updated. The policy wil  set the diagnostic with all metrics and category enabled",
           "DisplayName": "Deploy Diagnostic Settings for SQL Databases  to Log Analytics workspace",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Monitoring"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "logAnalytics": {

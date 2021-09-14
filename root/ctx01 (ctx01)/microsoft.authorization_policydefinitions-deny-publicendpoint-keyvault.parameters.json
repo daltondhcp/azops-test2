@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "This policy denies creation of Key Vaults with IP Firewall exposed to all public endpoints",
           "DisplayName": "Public network access should be disabled for KeyVault",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Key Vault"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "effect": {

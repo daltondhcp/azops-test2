@@ -10,6 +10,10 @@
         "Properties": {
           "Description": "Deploy auditing, Alert, TDE and SQL vulnerability to SQL Databases when it not exist in the deployment",
           "DisplayName": "Deploy SQL Database built-in SQL security configuration",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "SQL"
+          },
           "Parameters": {
             "vulnerabilityAssessmentsEmail": {
               "type": "String",

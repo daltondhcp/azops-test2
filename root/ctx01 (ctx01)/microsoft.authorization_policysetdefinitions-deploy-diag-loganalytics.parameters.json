@@ -10,6 +10,10 @@
         "Properties": {
           "Description": "This policy set deploys the configurations of application Azure resources to forward diagnostic logs and metrics to an Azure Log Analytics workspace. See the list of policies of the services that are included ",
           "DisplayName": "Deploy Diagnostic Settings to Azure Services",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Monitoring"
+          },
           "Parameters": {
             "logAnalytics": {
               "type": "String",

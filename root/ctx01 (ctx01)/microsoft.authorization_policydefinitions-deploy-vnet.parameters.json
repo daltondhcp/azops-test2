@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploy spoke network with configuration to hub network based on ipam configuration object",
           "DisplayName": "Deploy spoke network with configuration to hub network based on ipam configuration object",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "ipam": {

@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploys Log Analytics and Automation account to the subscription where the policy is assigned.",
           "DisplayName": "Deploy the Log Analytics in the subscription",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Monitoring"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "workspaceName": {

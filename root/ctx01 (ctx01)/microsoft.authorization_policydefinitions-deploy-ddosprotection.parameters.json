@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploys an Azure DDoS Protection Standard plan",
           "DisplayName": "Deploy an Azure DDoS Protection Standard plan",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "ddosName": {

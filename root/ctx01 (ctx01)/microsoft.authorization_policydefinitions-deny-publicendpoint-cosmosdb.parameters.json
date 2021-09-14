@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "This policy denies that  Cosmos database accounts  are created with out public network access is disabled.",
           "DisplayName": "Public network access should be disabled for CosmosDB",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "SQL"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "effect": {

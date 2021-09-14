@@ -9,6 +9,10 @@
         "Properties": {
           "Description": "Deploy Virtual Hub network with Virtual Wan and Gateway and Firewall configured in the desired region. ",
           "DisplayName": "Deploy Virtual Hub network with Virtual Wan and Gateway and Firewall configured.",
+          "Metadata": {
+            "version": "1.0.0",
+            "category": "Network"
+          },
           "Mode": "Indexed",
           "Parameters": {
             "vwanname": {
