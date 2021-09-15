@@ -11,7 +11,7 @@
   "resources": [
     {
       "type": "Microsoft.Authorization/policyAssignments",
-      "name": "50f7f9d84f25429ca51cbda6",
+      "name": "50f7f9d84f25429ca51cbdaee6",
       "apiVersion": "2021-06-01",
       "location": "eastus",
       "identity": {
