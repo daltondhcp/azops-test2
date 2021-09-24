@@ -24,7 +24,7 @@
         "NotScopes": [],
         "DisplayName": "Deploy-DNSZoneGroup-AKS",
         "Description": null,
-        "EnforcementMode": "Default",
+        "EnforcementMode": "DoNotEnforce",
         "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/ctx01/providers/Microsoft.Authorization/policyDefinitions/e9bfbd62-c238-4af8-9249-ffac795a5497",
         "Parameters": {
           "privateDnsZoneId": {
