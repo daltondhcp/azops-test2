@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleDefinitions",
+      "name": "3b496b6e-10b0-4e0b-9c81-5fba8608fc19",
+      "apiVersion": "2018-07-01",
+      "properties": {
+        "RoleName": "Test-2",
+        "Description": "",
+        "AssignableScopes": [
+          "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/"
+        ],
+        "Permissions": [
+          {
+            "Actions": [
+              "*"
+            ],
+            "DataActions": [],
+            "NotActions": [
+              "Microsoft.Authorization/*/Delete",
+              "Microsoft.Authorization/elevateAccess/Action",
+              "Microsoft.Blueprint/blueprintAssignments/write",
+              "Microsoft.Blueprint/blueprintAssignments/delete",
+              "Microsoft.Compute/galleries/share/action"
+            ],
+            "NotDataActions": []
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": {}
+}
