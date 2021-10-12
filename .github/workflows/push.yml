@@ -130,5 +130,4 @@ jobs:
           else{
             $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff })
           }
-          Get-Job | Remove-Job -Force-ChangeSet $diff })
           Get-Job | Remove-Job -Force
