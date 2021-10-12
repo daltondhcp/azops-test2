@@ -66,14 +66,7 @@ jobs:
               Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
           }
         shell: pwsh
-        
-      - name: "Install Bicep"
-        run: |
-          curl -Lo bicep.bin https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
-          chmod +x ./bicep.bin
-          sudo mv ./bicep.bin /usr/local/bin/bicep
-          bicep --version
-        shell: bash
+
       #
       # Connect
       # Authenticate Azure context
@@ -96,8 +89,8 @@ jobs:
         run: |
           echo $(git diff --name-status HEAD^ HEAD)
           git diff --name-status HEAD^ HEAD > /tmp/diff.txt
-         # echo $(git diff --diff-filter=D HEAD^ HEAD  --no-prefix | grep ^- | sed -r "s/^([^-+ ]*)[-+ ]/\\1/" | less -r) 
-         # git diff --diff-filter=D HEAD^ HEAD --no-prefix | grep ^- | sed -r "s/^([^-+ ]*)[-+ ]/\\1/" | less -r > /tmp/diffdeletedfiles.txt
+          echo $(git diff --diff-filter=D HEAD^ HEAD  --no-prefix | grep ^- | sed -r "s/^([^-+ ]*)[-+ ]/\\1/" | less -r) 
+          git diff --diff-filter=D HEAD^ HEAD --no-prefix | grep ^- | sed -r "s/^([^-+ ]*)[-+ ]/\\1/" | less -r > /tmp/diffdeletedfiles.txt
 
 
       #
@@ -110,9 +103,9 @@ jobs:
           Initialize-AzOpsEnvironment
           Import-PSFConfig -Path settings.json -Schema MetaJson
           $diff = Get-Content -Path /tmp/diff.txt
-          #$diffdeletedfiles = Get-Content -Path /tmp/diffdeletedfiles.txt
+          $diffdeletedfiles = Get-Content -Path /tmp/diffdeletedfiles.txt
           $module = Get-Module -Name AzOps
-          $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff -WhatIf })
+          $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff -DeleteSetContents $diffdeletedfiles -WhatIf })
           Get-Job | Remove-Job -Force
 
       #
