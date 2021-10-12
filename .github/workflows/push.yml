@@ -1,8 +1,7 @@
-#---
+--- #---
 name: "AzOps - Push"
 
 on:
-
   #
   # Push
   # Automated workflow trigger when a merge
@@ -13,10 +12,9 @@ on:
     branches:
       - main
     paths:
-      - 'root/**'
+      - "root/**"
 
 env:
-
   #
   # Credentials
   #
@@ -27,9 +25,7 @@ env:
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
 
 jobs:
-
   push:
-
     #
     # Push
     #
@@ -38,7 +34,6 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-
       #
       # Checkout
       # Checks-out the repository
@@ -54,10 +49,10 @@ jobs:
       # Install required runtime modules
       #
 
-     # - name: "Dependencies"
-     #   shell: pwsh
-     #   run: |
-     #     Install-Module -Name "AzOps" -Force
+      # - name: "Dependencies"
+      #   shell: pwsh
+      #   run: |
+      #     Install-Module -Name "AzOps" -Force
       - name: "Dependencies"
         run: |
           . .github/scripts/Install.ps1
@@ -68,7 +63,7 @@ jobs:
               Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
           }
         shell: pwsh
-        
+
       - name: "Install Bicep"
         run: |
           curl -Lo bicep.bin https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
@@ -76,21 +71,20 @@ jobs:
           sudo mv ./bicep.bin /usr/local/bin/bicep
           bicep --version
         shell: bash
-    #
+      #
       # Connect
       # Authenticate Azure context
       #
-
       - name: "Connect"
         shell: pwsh
         run: |
           $credential = New-Object PSCredential -ArgumentList $env:ARM_CLIENT_ID, (ConvertTo-SecureString -String $env:ARM_CLIENT_SECRET -AsPlainText -Force)
           Connect-AzAccount -TenantId $env:ARM_TENANT_ID -ServicePrincipal -Credential $credential -SubscriptionId $env:ARM_SUBSCRIPTION_ID
+        #- name: "Dependencies"
       #
-             #- name: "Dependencies"
-     #  run: |
-     #    Install-Module -Name "AzOps" -Force
-     #  shell: pwsh
+      #  run: |
+      #    Install-Module -Name "AzOps" -Force
+      #  shell: pwsh
       - name: "Dependencies"
         run: |
           . .github/scripts/Install.ps1
@@ -101,6 +95,7 @@ jobs:
               Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
           }
         shell: pwsh
+      #
       # Diff
       # List index changes
       #
@@ -110,7 +105,10 @@ jobs:
         run: |
           echo $(git diff --name-status HEAD^ HEAD)
           git diff --name-status HEAD^ HEAD > /tmp/diff.txt
-
+          if [ ! -z "$(git diff --diff-filter=D HEAD^ HEAD)" ]; then
+            echo $(git diff --diff-filter=D HEAD^ HEAD  --no-prefix | grep ^- | sed -r "s/^([^-+ ]*)[-+ ]/\\1/" | less -r) 
+            git diff --diff-filter=D HEAD^ HEAD --no-prefix | grep ^- | sed -r "s/^([^-+ ]*)[-+ ]/\\1/" | less -r > /tmp/diffdeletedfiles.txt
+          fi
       #
       # Deploy
       # Initial deployment of any index changes
@@ -122,6 +120,15 @@ jobs:
           Initialize-AzOpsEnvironment
           Import-PSFConfig -Path settings.json -Schema MetaJson
           $diff = Get-Content -Path /tmp/diff.txt
+          $diffdeletedfiles = Get-Content -Path /tmp/diffdeletedfiles.txt
           $module = Get-Module -Name AzOps
-          $module.Invoke({ Invoke-AzOpsChange -ChangeSet $diff })
+          if(Test-Path -Path "/tmp/diffdeletedfiles.txt")
+          {
+            $diffdeletedfiles = Get-Content -Path /tmp/diffdeletedfiles.txt
+            $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff -DeleteSetContents $diffdeletedfiles })
+          }
+          else{
+            $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff })
+          }
+          Get-Job | Remove-Job -Force-ChangeSet $diff })
           Get-Job | Remove-Job -Force
