@@ -23,7 +23,6 @@ resource roleNameGuid_resource 'Microsoft.Authorization/roleEligibilityScheduleR
         endDateTime: null
         duration: 'P365D'
       }
-      recurrence: null
     }
   }
 }
