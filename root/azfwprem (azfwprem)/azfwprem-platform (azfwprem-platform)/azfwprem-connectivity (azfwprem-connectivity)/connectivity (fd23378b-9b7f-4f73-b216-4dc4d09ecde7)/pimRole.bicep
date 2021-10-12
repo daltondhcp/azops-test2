@@ -1,4 +1,4 @@
-@description('The principal to assign the role to')
+@description('The principal to assign the rol e to')
 param principalId string
 
 @description('Built-in role to assign')
