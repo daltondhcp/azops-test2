@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "0da2f07b-f963-4791-9fdf-3586fa1d87f4",
+      "apiVersion": "2021-04-01-preview",
+      "properties": {
+        "DisplayName": "AzOps-Debug",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "da272f86-0328-43e2-bd16-4310be8b8af1",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        "RoleDefinitionName": "Owner"
+      }
+    }
+  ],
+  "outputs": {}
+}
