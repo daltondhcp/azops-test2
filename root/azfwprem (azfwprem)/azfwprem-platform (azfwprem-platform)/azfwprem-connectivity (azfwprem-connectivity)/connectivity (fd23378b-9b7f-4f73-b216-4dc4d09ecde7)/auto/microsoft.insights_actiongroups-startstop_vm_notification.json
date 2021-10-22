@@ -12,7 +12,7 @@
     {
       "type": "microsoft.insights/actionGroups",
       "name": "StartStop_VM_Notification",
-      "apiVersion": "2021-09-01",
+      "apiVersion": "2019-06-01",
       "location": "Global",
       "tags": null,
       "properties": {
