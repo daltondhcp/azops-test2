@@ -6,7 +6,7 @@
   "resources": [
     {
       "type": "Microsoft.Authorization/roleAssignments",
-      "name": "2fa92208-b132-4f28-b56f-0422cbcec57d",
+      "name": "2fa92208-b132-4f28-b56f-0422cbcec57f",
       "apiVersion": "2021-04-01-preview",
       "properties": {
         "DisplayName": "Use 2",
