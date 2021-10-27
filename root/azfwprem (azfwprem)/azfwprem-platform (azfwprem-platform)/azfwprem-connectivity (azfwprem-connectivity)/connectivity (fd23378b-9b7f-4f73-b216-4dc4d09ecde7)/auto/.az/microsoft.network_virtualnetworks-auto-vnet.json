@@ -18,7 +18,8 @@
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
-            "172.16.0.0/16"
+            "172.16.0.0/16",
+            "10.232.0.0/24"
           ]
         },
         "subnets": [
