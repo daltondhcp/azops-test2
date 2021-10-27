@@ -17,7 +17,7 @@
         "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/ctx01/providers/Microsoft.Authorization/policyAssignments/50f7f9d84f25429ca51cbda6",
         "PolicyDefinitionReferenceIds": [],
         "ExemptionCategory": "Waiver",
-        "DisplayName": "connectivity - Deploy-DNSZoneGroup-AKS",
+        "DisplayName": "connectivity - Deploy-DNSZ neGroup-AKS",
         "Description": null,
         "ExpiresOn": null
       }
