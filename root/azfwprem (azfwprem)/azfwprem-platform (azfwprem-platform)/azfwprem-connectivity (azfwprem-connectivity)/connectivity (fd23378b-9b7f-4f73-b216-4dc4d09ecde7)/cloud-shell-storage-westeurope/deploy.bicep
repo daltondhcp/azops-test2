@@ -10,6 +10,7 @@ param roleNameGuid string = newGuid()
 @description('Start DateTime of the role eligibility schedule')
 param startDateTime string = utcNow()
 
+
 resource roleNameGuid_resource 'Microsoft.Authorization/roleEligibilityScheduleRequests@2020-10-01-preview' = {
   name: roleNameGuid
   properties: {
