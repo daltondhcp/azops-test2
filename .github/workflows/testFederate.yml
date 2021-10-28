@@ -1,6 +1,10 @@
 --- #---
 name: "Test Federation"
 
+
+permissions:
+   id-token: write
+   
 on:
   #
   # Push
