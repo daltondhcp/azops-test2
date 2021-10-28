@@ -55,10 +55,10 @@ jobs:
       #     Install-Module -Name "AzOps" -Force
       - name: "Get token"
         run: |
-        bearerToken=${ACTIONS_ID_TOKEN_REQUEST_TOKEN}
-        runtimeUrl=${ACTIONS_ID_TOKEN_REQUEST_URL}
-        runtimeUrl="${runtimeUrl}&audience=api://AzureADTokenExchange"       
-        echo ::set-output name=JWTTOKEN::$(curl -H "Authorization: bearer $bearerToken" $runtimeUrl | jq -r ".value")
+          bearerToken=${ACTIONS_ID_TOKEN_REQUEST_TOKEN}
+          runtimeUrl=${ACTIONS_ID_TOKEN_REQUEST_URL}
+          runtimeUrl="${runtimeUrl}&audience=api://AzureADTokenExchange"       
+          echo ::set-output name=JWTTOKEN::$(curl -H "Authorization: bearer $bearerToken" $runtimeUrl | jq -r ".value")
         id: tokenForAAD
         
       - name: "Dependencies"
