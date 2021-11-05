@@ -1,18 +1,22 @@
 ---
-name: "AzOps - Validate"
+name: "AzOps - Push"
 
 on:
+
   #
-  # Pull Request
-  # Upon the creation of a new Pull Request in the root folder
-  # this workflow will execute.
+  # Push
+  # Automated workflow trigger when a merge
+  # commit enters the main branch.
   #
 
-  pull_request:
+  push:
+    branches:
+      - main
     paths:
-      - "root/**"
+      - 'root/**'
 
 env:
+
   #
   # Credentials
   #
@@ -23,15 +27,18 @@ env:
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
 
 jobs:
-  validate:
+
+  push:
+
     #
-    # Validate
+    # Push
     #
 
-    name: "Validate"
+    name: "Push"
     runs-on: ubuntu-20.04
 
     steps:
+
       #
       # Checkout
       # Checks-out the repository
@@ -48,9 +55,9 @@ jobs:
       #
 
       - name: "Dependencies"
+        shell: pwsh
         run: |
           Install-Module -Name "AzOps" -Force
-        shell: pwsh
 
       #
       # Connect
@@ -69,7 +76,6 @@ jobs:
       #
 
       - name: "Diff"
-        id: diff
         shell: bash
         run: |
           if [ ! -z "$(git diff --name-status HEAD^ HEAD)" ]; then
@@ -85,33 +91,22 @@ jobs:
           fi
 
       #
-      # Validate
+      # Deploy
+      # Initial deployment of any index changes
       #
 
-      - name: "Validate"
+      - name: "Deploy"
         shell: pwsh
         run: |
           Initialize-AzOpsEnvironment
           Import-PSFConfig -Path settings.json -Schema MetaJson -EnableException
           $diff = Get-Content -Path /tmp/diff.txt
           $module = Get-Module -Name AzOps
-          if(Test-Path -Path "/tmp/diffdeletedfiles.txt")
-          {
+          if(Test-Path -Path "/tmp/diffdeletedfiles.txt") {
             $diffdeletedfiles = Get-Content -Path /tmp/diffdeletedfiles.txt
-            $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff -DeleteSetContents $diffdeletedfiles -WhatIf })
+            $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff -DeleteSetContents $diffdeletedfiles })
           }
-          else{
-            $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff -WhatIf })
+          else {
+            $module.Invoke({ Invoke-AzOpsPush -ChangeSet $diff })
           }
           Get-Job | Remove-Job -Force
-
-      #
-      # Results
-      #
-
-      - name: "Results"
-        shell: bash
-        run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body-file /tmp/OUTPUT.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
