@@ -1,5 +1,5 @@
 ---
-name: "AzOps - Pull"
+name: "AzOps - Pull - Federate test"
 
 on:
   #
