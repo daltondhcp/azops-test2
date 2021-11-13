@@ -37,7 +37,8 @@ jobs:
 
     name: "Push"
     runs-on: ubuntu-20.04
-
+    environment: prod
+    
     steps:
 
       #
