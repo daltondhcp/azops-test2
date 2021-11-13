@@ -39,6 +39,17 @@
               "privateLinkServiceNetworkPolicies": "Enabled"
             },
             "type": "Microsoft.Network/virtualNetworks/subnets"
+          },
+          {
+            "name": "test",
+            "properties": {
+              "addressPrefix": "172.16.1.0/24",
+              "serviceEndpoints": [],
+              "delegations": [],
+              "privateEndpointNetworkPolicies": "Enabled",
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            },
+            "type": "Microsoft.Network/virtualNetworks/subnets"
           }
         ],
         "virtualNetworkPeerings": [],
