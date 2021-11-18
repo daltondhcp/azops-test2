@@ -55,14 +55,14 @@ jobs:
       - name: "Dependencies"
         shell: pwsh
         run: |
-          #Install-Module -Name "AzOps" -Force
-          . .github/scripts/Install.ps1
-          Install-SourceModule -Repository "Jefajers/AzOps" -Branch "verboseoutput"
-          $module = Get-Module -Name AzOps -ListAvailable
-          $data = Import-PowerShellDataFile -Path $module.Path
-          foreach ($dependency in $data.RequiredModules) {
-          Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
-          }
+          Install-Module -Name "AzOps" -Force
+          #. .github/scripts/Install.ps1
+          #Install-SourceModule -Repository "Jefajers/AzOps" -Branch "verboseoutput"
+          #$module = Get-Module -Name AzOps -ListAvailable
+          #$data = Import-PowerShellDataFile -Path $module.Path
+          #foreach ($dependency in $data.RequiredModules) {
+          #Install-Module -Name $dependency.ModuleName -RequiredVersion $dependency.RequiredVersion -Force
+          #}
 
       - name: "Install CLI-beta (for OIDC federated credentials support)"
         run: |
