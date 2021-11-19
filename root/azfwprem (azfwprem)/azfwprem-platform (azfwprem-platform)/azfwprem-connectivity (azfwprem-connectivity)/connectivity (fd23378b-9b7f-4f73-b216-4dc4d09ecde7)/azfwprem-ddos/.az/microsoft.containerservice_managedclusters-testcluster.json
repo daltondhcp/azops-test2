@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.ContainerService/managedClusters",
       "name": "testcluster",
-      "apiVersion": "2021-10-01",
+      "apiVersion": "2021-09-01",
       "location": "eastus",
       "tags": null,
       "properties": {
@@ -110,8 +110,7 @@
             "clientId": "a685dffa-377e-4b27-a44f-4836b56b6718",
             "objectId": "1916ce42-4da2-498a-87bd-4220f304fe5e"
           }
-        },
-        "publicNetworkAccess": "Disabled"
+        }
       }
     }
   ],

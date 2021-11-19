@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.ContainerService/managedClusters",
       "name": "test123",
-      "apiVersion": "2021-10-01",
+      "apiVersion": "2021-09-01",
       "location": "eastus",
       "tags": null,
       "properties": {
@@ -131,8 +131,7 @@
           "scan-interval": "10s",
           "skip-nodes-with-local-storage": "false",
           "skip-nodes-with-system-pods": "true"
-        },
-        "publicNetworkAccess": "Disabled"
+        }
       }
     }
   ],
