@@ -14,7 +14,11 @@
       "name": "auto",
       "apiVersion": "2019-05-01",
       "location": "westeurope",
-      "tags": null,
+      "tags": {
+        "costCenter": "123456",
+        "costCenter2": "123456",
+        "owner": "chasper"
+      },
       "properties": {}
     }
   ],
