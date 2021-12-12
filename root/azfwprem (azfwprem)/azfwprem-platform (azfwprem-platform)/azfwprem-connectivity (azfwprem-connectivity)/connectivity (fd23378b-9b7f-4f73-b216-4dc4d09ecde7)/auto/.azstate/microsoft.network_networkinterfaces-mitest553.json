@@ -20,7 +20,7 @@
           {
             "name": "ipconfig1",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/auto/providers/Microsoft.Network/networkInterfaces/mitest553/ipConfigurations/ipconfig1",
-            "etag": "W/\"e9cdd570-b672-41c6-af0c-2c9864df9250\"",
+            "etag": "W/\"3bcdba55-bfc4-4982-acc3-b33caa1b1ddd\"",
             "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
             "properties": {
               "provisioningState": "Succeeded",
