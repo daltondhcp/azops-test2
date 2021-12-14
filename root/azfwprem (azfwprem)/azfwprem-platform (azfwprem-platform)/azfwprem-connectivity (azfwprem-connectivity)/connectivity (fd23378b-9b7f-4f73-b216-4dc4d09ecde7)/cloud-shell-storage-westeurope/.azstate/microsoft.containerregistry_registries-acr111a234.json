@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.ContainerRegistry/registries",
       "name": "acr111a234",
-      "apiVersion": "2021-08-01-preview",
+      "apiVersion": "2021-09-01",
       "location": "westeurope",
       "tags": {},
       "properties": {
@@ -29,8 +29,20 @@
           "retentionPolicy": {
             "days": 7,
             "status": "disabled"
+          },
+          "exportPolicy": {
+            "status": "enabled"
           }
-        }
+        },
+        "encryption": {
+          "status": "disabled"
+        },
+        "dataEndpointEnabled": false,
+        "dataEndpointHostNames": [],
+        "privateEndpointConnections": [],
+        "publicNetworkAccess": "Enabled",
+        "networkRuleBypassOptions": "AzureServices",
+        "zoneRedundancy": "Disabled"
       }
     }
   ],
