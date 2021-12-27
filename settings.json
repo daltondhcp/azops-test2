@@ -31,8 +31,6 @@
             "Core.TemplateParameterFileSuffix": ".json",
             "Core.ThrottleLimit": 10,
             "Core.WhatifExcludedChangeTypes":[
-                "NoChange",
-                "Ignore"
             ]
         },
         "|AzureDevOps": {
