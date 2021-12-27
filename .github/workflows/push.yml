@@ -62,7 +62,7 @@ jobs:
       - name: "Dependencies"
         shell: pwsh
         run: |
-          Install-Module -Name "AzOps" -Force
+          #Install-Module -Name "AzOps" -Force
           . .github/scripts/Install.ps1
           Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "ansiEncoding"
           $module = Get-Module -Name AzOps -ListAvailable
