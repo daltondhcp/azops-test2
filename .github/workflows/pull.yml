@@ -166,7 +166,7 @@ jobs:
         run: |
           #Install-Module -Name "AzOps" -Force
           . .github/scripts/Install.ps1
-          Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "ansiEncoding"
+          Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "bicepParam"
           $module = Get-Module -Name AzOps -ListAvailable
           $data = Import-PowerShellDataFile -Path $module.Path
           foreach ($dependency in $data.RequiredModules) {
