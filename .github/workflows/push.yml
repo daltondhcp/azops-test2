@@ -64,7 +64,7 @@ jobs:
         run: |
           #Install-Module -Name "AzOps" -Force
           . .github/scripts/Install.ps1
-          Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "bicepParam"
+          Install-SourceModule -Repository "Azure/AzOps" -Branch "main"
           $module = Get-Module -Name AzOps -ListAvailable
           $data = Import-PowerShellDataFile -Path $module.Path
           foreach ($dependency in $data.RequiredModules) {
@@ -123,8 +123,8 @@ jobs:
       - name: "Deploy"
         shell: pwsh
         run: |
-          Import-PSFConfig -Path settings.json -Schema MetaJson -EnableException
           Initialize-AzOpsEnvironment
+          Import-PSFConfig -Path settings.json -Schema MetaJson -EnableException
           $diff = Get-Content -Path /tmp/diff.txt
           $module = Get-Module -Name AzOps
           if(Test-Path -Path "/tmp/diffdeletedfiles.txt") {
