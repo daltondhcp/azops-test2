@@ -25,6 +25,7 @@
             "Core.PartialMgDiscoveryRoot": ["azfwprem"],
             "Core.SkipPolicy": false,
             "Core.SkipResource": false,
+            "Core.SkipChildResource": false,
             "Core.SkipResourceGroup": false,
             "Core.SkipRole": false,
             "Core.SubscriptionsToIncludeResourceGroups": "*",
