@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Automation/automationAccounts/variables",
+      "apiVersion": "2020-01-13-preview",
+      "name": "myaa33d/External_AutoStop_Frequency",
+      "properties": {
+        "isEncrypted": false,
+        "value": "\"00:05:00\"",
+        "description": "The evaluation frequency for rule. This parameter accepts input in timespan format. Possible values are from 5 mins to 6 hours."
+      }
+    }
+  ],
+  "outputs": {}
+}
