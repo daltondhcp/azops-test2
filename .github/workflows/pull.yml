@@ -166,7 +166,7 @@ jobs:
         run: |
           #Install-Module -Name "AzOps" -Force
           . .github/scripts/Install.ps1
-          Install-SourceModule -Repository "daltondhcp/AzOps" -Branch "fix/policyAssignment"
+          Install-SourceModule -Repository "Azure/AzOps" -Branch "fix/policyAssignment/UMI"
           $module = Get-Module -Name AzOps -ListAvailable
           $data = Import-PowerShellDataFile -Path $module.Path
           foreach ($dependency in $data.RequiredModules) {
