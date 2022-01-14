@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Automation/automationAccounts/variables",
+      "apiVersion": "2020-01-13-preview",
+      "name": "myaa33d/External_WaitTimeForVMRetryInSeconds",
+      "properties": {
+        "isEncrypted": false,
+        "value": "\"2100\"",
+        "description": "The wait time in seconds for the actions to be performed on the VMs for the Sequenced start/stop runbook."
+      }
+    }
+  ],
+  "outputs": {}
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.ContainerService/managedClusters/agentPools",
+      "apiVersion": "2021-09-01",
+      "name": "test123/agentpool",
+      "properties": {
+        "count": 3,
+        "vmSize": "Standard_DS2_v2",
+        "osDiskSizeGB": 128,
+        "osDiskType": "Managed",
+        "kubeletDiskType": "OS",
+        "maxPods": 110,
+        "type": "VirtualMachineScaleSets",
+        "availabilityZones": [
+          "1",
+          "2",
+          "3"
+        ],
+        "maxCount": 5,
+        "minCount": 1,
+        "enableAutoScaling": true,
+        "powerState": {
+          "code": "Running"
+        },
+        "orchestratorVersion": "1.21.2",
+        "mode": "System",
+        "osType": "Linux",
+        "osSKU": "Ubuntu",
+        "enableFIPS": false
+      }
+    }
+  ],
+  "outputs": {}
+}
