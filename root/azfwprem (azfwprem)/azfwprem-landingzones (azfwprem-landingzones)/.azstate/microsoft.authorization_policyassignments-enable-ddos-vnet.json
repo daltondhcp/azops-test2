@@ -22,7 +22,7 @@
       "properties": {
         "Scope": "/providers/Microsoft.Management/managementGroups/azfwprem-landingzones",
         "NotScopes": null,
-        "DisplayName": "Virtual networks should be protected by Azure DDoS Protection Standard",
+        "DisplayName": "Virtual netwo rks should be protected by Azure DDoS Protection Standard",
         "Description": "Protect your virtual networks against volumetric and protocol attacks with Azure DDoS Protection Standard. For more information, visit https://aka.ms/ddosprotectiondocs.",
         "EnforcementMode": "Default",
         "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94de2ad3-e0c1-4caf-ad78-5d47bbc83d3d",
