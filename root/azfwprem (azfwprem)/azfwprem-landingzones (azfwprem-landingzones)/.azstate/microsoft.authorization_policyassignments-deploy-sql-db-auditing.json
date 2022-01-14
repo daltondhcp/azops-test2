@@ -23,7 +23,7 @@
       "properties": {
         "Scope": "/providers/Microsoft.Management/managementGroups/azfwprem-landingzones",
         "NotScopes": null,
-        "DisplayName": "Auditing on SQL server should be enabled",
+        "DisplayName": "Auditing on SQ L server should be enabled",
         "Description": "Auditing on your SQL Server should be enabled to track database activities across all databases on the server and save them in an audit log.",
         "EnforcementMode": "Default",
         "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9",
