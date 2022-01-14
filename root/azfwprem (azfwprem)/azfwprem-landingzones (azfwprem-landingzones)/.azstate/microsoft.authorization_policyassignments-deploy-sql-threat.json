@@ -17,8 +17,7 @@
       "identity": {
         "PrincipalId": "624c64eb-b991-4751-bbe9-19cd4ccb9bc6",
         "TenantId": "3114ebe8-8d3f-4bac-b3ce-59b4210a1287",
-        "IdentityType": "SystemAssigned",
-        "UserAssignedIdentities": null
+        "Type": "SystemAssigned"
       },
       "properties": {
         "Scope": "/providers/Microsoft.Management/managementGroups/azfwprem-landingzones",

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Automation/automationAccounts/runbooks",
+      "apiVersion": "2019-06-01",
+      "name": "myaa33d/AutoStop_CreateAlert_Parent",
+      "location": "eastus2",
+      "tags": {
+        "version": "2.0.0.0"
+      },
+      "properties": {
+        "description": "Runbook to create alerts for AutoStartStop actions",
+        "logVerbose": false,
+        "logProgress": false,
+        "logActivityTrace": 0,
+        "runbookType": "PowerShell"
+      }
+    }
+  ],
+  "outputs": {}
+}
