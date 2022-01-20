@@ -28,7 +28,7 @@
         ],
         "smsReceivers": [],
         "webhookReceivers": [],
-        "eventhubReceivers": [],
+        "eventHubReceivers": [],
         "itsmReceivers": [],
         "azureAppPushReceivers": [],
         "automationRunbookReceivers": [],
