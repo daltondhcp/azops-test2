@@ -27,7 +27,7 @@
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2020-10-01",
       "name": "AzOps-microsoft.management_managementgroups-nested",
-      "location": "northeurope",
+      "location": "[deployment().location]",
       "properties": {
         "mode": "Incremental",
         "template": {
@@ -97,6 +97,48 @@
               "scope": "/",
               "properties": {
                 "displayName": "azfwprem-decommissioned2",
+                "details": {
+                  "parent": {
+                    "id": "/providers/Microsoft.Management/managementGroups/azfwprem"
+                  }
+                }
+              }
+            },
+            {
+              "type": "Microsoft.Management/managementGroups",
+              "apiVersion": "2020-05-01",
+              "name": "azfwprem-decommissioned5",
+              "scope": "/",
+              "properties": {
+                "displayName": "azfwprem-decommissioned5",
+                "details": {
+                  "parent": {
+                    "id": "/providers/Microsoft.Management/managementGroups/azfwprem"
+                  }
+                }
+              }
+            },
+            {
+              "type": "Microsoft.Management/managementGroups",
+              "apiVersion": "2020-05-01",
+              "name": "azfwprem-decommissioned3",
+              "scope": "/",
+              "properties": {
+                "displayName": "azfwprem-decommissioned3",
+                "details": {
+                  "parent": {
+                    "id": "/providers/Microsoft.Management/managementGroups/azfwprem"
+                  }
+                }
+              }
+            },
+            {
+              "type": "Microsoft.Management/managementGroups",
+              "apiVersion": "2020-05-01",
+              "name": "azfwprem-decommissioned44",
+              "scope": "/",
+              "properties": {
+                "displayName": "azfwprem-decommissioned44",
                 "details": {
                   "parent": {
                     "id": "/providers/Microsoft.Management/managementGroups/azfwprem"
