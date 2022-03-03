@@ -11,14 +11,14 @@
   "resources": [
     {
       "type": "Microsoft.Management/managementGroups",
-      "name": "azfwprem-corp",
+      "name": "azfwprem-decommissioned3",
       "apiVersion": "2021-04-01",
       "scope": "/",
       "properties": {
-        "displayName": "azfwprem-corp",
+        "displayName": "azfwprem-decommissioned3",
         "details": {
           "parent": {
-            "id": "/providers/Microsoft.Management/managementGroups/azfwprem-landingzones"
+            "id": "/providers/Microsoft.Management/managementGroups/azfwprem"
           }
         }
       }
@@ -38,7 +38,7 @@
         }
       },
       "dependsOn": [
-        "/providers/Microsoft.Management/managementGroups/azfwprem-corp"
+        "/providers/Microsoft.Management/managementGroups/azfwprem-decommissioned3"
       ]
     }
   ],
