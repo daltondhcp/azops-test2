@@ -11,7 +11,7 @@
   "resources": [
     {
       "type": "Microsoft.ContainerService/managedClusters/agentPools",
-      "apiVersion": "2022-01-02-preview",
+      "apiVersion": "2021-11-01-preview",
       "name": "mytestcluster/agentpool",
       "properties": {
         "count": 3,
