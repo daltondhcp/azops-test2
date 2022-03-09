@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deploymentScripts",
+      "name": "North-Star-setup-westeurope-ppNorthStar",
+      "apiVersion": "2020-10-01",
+      "location": "westeurope",
+      "tags": null,
+      "properties": {
+        "azPowerShellVersion": "7.2",
+        "arguments": "-PPGuestMakerSetting yes -PPAppSharingSetting yes -PPEnvCreationSetting yes -PPTrialEnvCreationSetting yes -PPEnvCapacitySetting yes -PPTenantDLP yes -PPTenantIsolationSetting both -PPTenantIsolationDomains csuarm.onmicrosoft.com -PPAdminEnvNaming jdadmin -PPAdminBilling no -PPAdminRegion europe -PPAdminCoeSetting no -PPDefaultRenameText Personal -PPDefaultDLP yes -PPCitizen half -PPCitizenCount 1 -PPCitizenNaming cit -PPCitizenRegion europe -PPCitizenDlp yes -PPCitizenBilling yes -PPCitizenAlm yes -PPPro half -PPProCount 3 -PPProNaming pro -PPProRegion europe -PPProDlp yes -PPProBilling yes -PPProAlm yes -PPSelectIndustry none -PPIndustryNaming '' -PPIndustryRegion unitedstates -PPIndustryAlm no -PPIndustryBilling ''",
+        "primaryScriptUri": "https://raw.githubusercontent.com/daltondhcp/Azure/nsppscript/nsPowerPlatform.ps1",
+        "retentionInterval": "P1D",
+        "timeout": "PT2H",
+        "containerSettings": {},
+        "status": {
+          "containerInstanceId": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/North-Star-setup-westeurope/providers/Microsoft.ContainerInstance/containerGroups/kqldy5dgxxjtuazscripts",
+          "storageAccountId": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/North-Star-setup-westeurope/providers/Microsoft.Storage/storageAccounts/kqldy5dgxxjtuazscripts"
+        },
+        "cleanupPreference": "Always"
+      }
+    }
+  ],
+  "outputs": {}
+}
