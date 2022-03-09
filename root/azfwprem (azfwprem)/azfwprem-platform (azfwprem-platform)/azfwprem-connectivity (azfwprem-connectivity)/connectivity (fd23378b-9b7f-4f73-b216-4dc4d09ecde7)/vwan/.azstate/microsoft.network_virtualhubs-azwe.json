@@ -32,6 +32,7 @@
         "virtualWan": {
           "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/vwan/providers/Microsoft.Network/virtualWans/vwan-test"
         },
+        "networkVirtualAppliances": [],
         "sku": "Standard",
         "routingState": "Provisioned",
         "allowBranchToBranchTraffic": false,

@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "policytestjohan",
-      "apiVersion": "2021-08-01",
+      "apiVersion": "2021-09-01",
       "location": "eastus",
       "tags": {},
       "properties": {
