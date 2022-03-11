@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "microsoft.insights/components/ProactiveDetectionConfigs",
+      "apiVersion": "2018-05-01-preview",
+      "name": "North-Star-law-westeurope-insights/digestMailConfiguration",
+      "location": "westeurope",
+      "properties": {
+        "ruleDefinitions": {
+          "Name": "digestMailConfiguration",
+          "DisplayName": "Digest Mail Configuration",
+          "Description": "This rule describes the digest mail preferences",
+          "HelpUrl": "www.homail.com",
+          "IsHidden": true,
+          "IsEnabledByDefault": true,
+          "IsInPreview": false,
+          "SupportsEmailNotifications": true
+        },
+        "enabled": true,
+        "sendEmailsToSubscriptionOwners": true,
+        "customEmails": []
+      }
+    }
+  ],
+  "outputs": {}
+}

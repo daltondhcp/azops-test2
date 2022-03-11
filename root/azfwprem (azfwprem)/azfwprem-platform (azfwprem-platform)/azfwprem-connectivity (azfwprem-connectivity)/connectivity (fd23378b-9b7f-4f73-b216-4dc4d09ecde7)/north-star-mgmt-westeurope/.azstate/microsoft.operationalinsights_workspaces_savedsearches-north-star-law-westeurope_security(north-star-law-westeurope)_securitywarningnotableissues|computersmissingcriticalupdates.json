@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces/savedSearches",
+      "apiVersion": "2020-08-01",
+      "name": "north-star-law-westeurope/Security(north-star-law-westeurope)_SecurityWarningNotableIssues|ComputersMissingCriticalUpdates",
+      "properties": {
+        "displayName": "Computers missing critical updates",
+        "category": "Security Warning Notable Issues",
+        "query": "Update | where UpdateState == 'Needed' and Optional == false and Classification == 'Critical Updates' and Approved != false | summarize count() by Computer",
+        "version": 2
+      }
+    }
+  ],
+  "outputs": {}
+}
