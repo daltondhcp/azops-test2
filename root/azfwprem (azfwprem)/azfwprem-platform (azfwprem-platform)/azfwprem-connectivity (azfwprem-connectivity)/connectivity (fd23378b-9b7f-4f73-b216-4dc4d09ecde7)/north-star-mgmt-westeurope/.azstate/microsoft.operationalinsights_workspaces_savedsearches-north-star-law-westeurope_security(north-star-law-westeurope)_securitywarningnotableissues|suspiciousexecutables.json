@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces/savedSearches",
+      "apiVersion": "2020-08-01",
+      "name": "north-star-law-westeurope/Security(north-star-law-westeurope)_SecurityWarningNotableIssues|SuspiciousExecutables",
+      "properties": {
+        "displayName": "Suspicious executables",
+        "category": "Security Warning Notable Issues",
+        "query": "SecurityEvent | where EventID == 8002 and Fqbn == '-' | summarize ExecutionCountHash=count() by FileHash | where ExecutionCountHash <= 5",
+        "version": 2
+      }
+    }
+  ],
+  "outputs": {}
+}
