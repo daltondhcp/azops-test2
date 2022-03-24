@@ -10,13 +10,16 @@
   "variables": {},
   "resources": [
     {
-      "type": "Microsoft.Automation/automationAccounts/jobs",
-      "apiVersion": "2019-06-01",
-      "name": "myaa33d/SCH_5d98804f-480e-47e1-ad6f-f515b523b96a_2eebc81c-040f-4da0-af99-8ed2134718d7_637810341000000000",
+      "type": "Microsoft.OperationalInsights/workspaces/tables",
+      "apiVersion": "2021-12-01-preview",
+      "name": "myla/AZFWNetworkRule",
       "properties": {
-        "runbook": {
-          "name": "ScheduledStartStop_Parent"
-        }
+        "totalRetentionInDays": 30,
+        "plan": "Analytics",
+        "schema": {
+          "name": "AZFWNetworkRule"
+        },
+        "retentionInDays": 30
       }
     }
   ],
