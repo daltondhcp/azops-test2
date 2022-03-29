@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Network/networkManagers",
       "name": "test12331",
-      "apiVersion": "2022-02-01-preview",
+      "apiVersion": "2021-05-01-preview",
       "location": "westeurope",
       "tags": {},
       "properties": {
