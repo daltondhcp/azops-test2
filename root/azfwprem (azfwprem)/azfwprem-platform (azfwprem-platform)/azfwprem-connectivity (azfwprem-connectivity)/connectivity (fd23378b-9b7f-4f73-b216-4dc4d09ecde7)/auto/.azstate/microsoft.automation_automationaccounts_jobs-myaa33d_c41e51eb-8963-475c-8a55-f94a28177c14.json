@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Automation/automationAccounts/jobs",
       "apiVersion": "2019-06-01",
-      "name": "myaa33d/604477bb-95ce-4b8a-b5d1-33a4653f42ec",
+      "name": "myaa33d/c41e51eb-8963-475c-8a55-f94a28177c14",
       "properties": {
         "runbook": {
           "name": "ScheduledStartStop_Child"
