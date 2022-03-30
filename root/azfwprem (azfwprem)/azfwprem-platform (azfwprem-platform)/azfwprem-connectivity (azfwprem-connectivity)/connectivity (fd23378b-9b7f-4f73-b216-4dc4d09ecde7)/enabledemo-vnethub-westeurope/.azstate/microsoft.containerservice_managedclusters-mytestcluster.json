@@ -20,7 +20,6 @@
           "code": "Running"
         },
         "kubernetesVersion": "1.21.2",
-        "currentKubernetesVersion": "1.21.2",
         "dnsPrefix": "mytestcluster-dns",
         "fqdn": "mytestcluster-dns-ee8c332a.hcp.westeurope.azmk8s.io",
         "azurePortalFQDN": "bd7c09ff6392d5b570d92687d7731e05-priv.portal.hcp.westeurope.azmk8s.io",
