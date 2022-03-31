@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Network/networkInterfaces",
       "name": "mitest553",
-      "apiVersion": "2021-12-01",
+      "apiVersion": "2022-01-01",
       "location": "westeurope",
       "tags": null,
       "properties": {
@@ -20,7 +20,7 @@
           {
             "name": "ipconfig1",
             "id": "/subscriptions/fd23378b-9b7f-4f73-b216-4dc4d09ecde7/resourceGroups/auto/providers/Microsoft.Network/networkInterfaces/mitest553/ipConfigurations/ipconfig1",
-            "etag": "W/\"bc39e8d6-4a16-45e6-a4e5-6cb8eed69340\"",
+            "etag": "W/\"8bca2e88-4aaf-4c6d-b374-bf19b522f375\"",
             "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
             "properties": {
               "provisioningState": "Succeeded",
