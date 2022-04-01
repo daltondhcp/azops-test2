@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Compute/disks",
       "name": "mitest_OsDisk_1_139eef30c8df443e8dcaa395dbb83a39",
-      "apiVersion": "2021-12-01",
+      "apiVersion": "2022-03-02",
       "location": "westeurope",
       "tags": null,
       "properties": {
