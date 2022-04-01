@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines",
       "name": "mitest",
-      "apiVersion": "2021-11-01",
+      "apiVersion": "2022-03-01",
       "location": "westeurope",
       "tags": null,
       "properties": {
