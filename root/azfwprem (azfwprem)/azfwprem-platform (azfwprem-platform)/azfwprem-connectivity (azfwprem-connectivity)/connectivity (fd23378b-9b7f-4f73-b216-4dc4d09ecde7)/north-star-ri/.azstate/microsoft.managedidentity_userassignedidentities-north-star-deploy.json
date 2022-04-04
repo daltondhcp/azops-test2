@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
       "name": "north-star-deploy",
-      "apiVersion": "2021-09-30-PREVIEW",
+      "apiVersion": "2022-01-31-PREVIEW",
       "location": "westeurope",
       "tags": {},
       "properties": {
