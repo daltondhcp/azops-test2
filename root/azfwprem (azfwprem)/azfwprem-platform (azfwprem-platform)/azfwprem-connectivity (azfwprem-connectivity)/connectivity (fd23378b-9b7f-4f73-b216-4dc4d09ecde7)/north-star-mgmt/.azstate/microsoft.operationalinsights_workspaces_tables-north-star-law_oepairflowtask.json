@@ -10,13 +10,16 @@
   "variables": {},
   "resources": [
     {
-      "type": "Microsoft.Automation/automationAccounts/jobs",
-      "apiVersion": "2019-06-01",
-      "name": "myaa33d/72e5b0a8-8fdc-4c16-9661-016143b9d744",
+      "type": "Microsoft.OperationalInsights/workspaces/tables",
+      "apiVersion": "2021-12-01-preview",
+      "name": "north-star-law/OEPAirFlowTask",
       "properties": {
-        "runbook": {
-          "name": "ScheduledStartStop_Child"
-        }
+        "totalRetentionInDays": 30,
+        "plan": "Analytics",
+        "schema": {
+          "name": "OEPAirFlowTask"
+        },
+        "retentionInDays": 30
       }
     }
   ],
