@@ -10,13 +10,16 @@
   "variables": {},
   "resources": [
     {
-      "type": "Microsoft.Automation/automationAccounts/jobs",
-      "apiVersion": "2019-06-01",
-      "name": "myaa33d/82386aeb-a2d8-4906-9760-dbc130f428e8",
+      "type": "Microsoft.OperationalInsights/workspaces/tables",
+      "apiVersion": "2021-12-01-preview",
+      "name": "myla/OLPSupplyChainEvents",
       "properties": {
-        "runbook": {
-          "name": "ScheduledStartStop_Child"
-        }
+        "totalRetentionInDays": 30,
+        "plan": "Analytics",
+        "schema": {
+          "name": "OLPSupplyChainEvents"
+        },
+        "retentionInDays": 30
       }
     }
   ],
