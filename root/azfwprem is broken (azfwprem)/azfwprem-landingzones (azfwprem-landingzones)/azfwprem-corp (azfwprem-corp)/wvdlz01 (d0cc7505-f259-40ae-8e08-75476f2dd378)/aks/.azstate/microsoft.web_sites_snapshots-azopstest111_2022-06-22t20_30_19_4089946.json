@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Web/sites/snapshots",
+      "apiVersion": "2015-08-01",
+      "name": "azopstest111/2022-06-22T20_30_19_4089946"
+    }
+  ],
+  "outputs": {}
+}

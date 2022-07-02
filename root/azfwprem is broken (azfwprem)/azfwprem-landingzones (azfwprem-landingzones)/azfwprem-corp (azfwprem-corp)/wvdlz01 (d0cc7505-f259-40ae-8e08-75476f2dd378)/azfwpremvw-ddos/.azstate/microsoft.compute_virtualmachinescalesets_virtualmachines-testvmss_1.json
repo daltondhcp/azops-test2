@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "apiVersion": "2022-03-01",
+      "name": "testvmss/1",
+      "location": "westeurope",
+      "sku": {
+        "name": "Standard_D2s_v3",
+        "tier": "Standard"
+      },
+      "properties": {
+        "networkProfileConfiguration": {
+          "networkInterfaceConfigurations": [
+            {
+              "name": "d0cc7505-f259-40ae-8e08-75476f2dd378-mymg-vnet-west-nic01",
+              "properties": {
+                "primary": true,
+                "enableAcceleratedNetworking": true,
+                "networkSecurityGroup": {
+                  "id": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourceGroups/azfwpremvw-ddos/providers/Microsoft.Network/networkSecurityGroups/basicNsgd0cc7505-f259-40ae-8e08-75476f2dd378-mymg-vnet-west-nic01"
+                },
+                "dnsSettings": {
+                  "dnsServers": []
+                },
+                "enableIPForwarding": false,
+                "ipConfigurations": [
+                  {
+                    "name": "d0cc7505-f259-40ae-8e08-75476f2dd378-mymg-vnet-west-nic01-defaultIpConfiguration",
+                    "properties": {
+                      "primary": true,
+                      "subnet": {
+                        "id": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourceGroups/mymg-vnet-westeurope/providers/Microsoft.Network/virtualNetworks/d0cc7505-f259-40ae-8e08-75476f2dd378-mymg-vnet-westeurope/subnets/subnet1"
+                      },
+                      "privateIPAddressVersion": "IPv4"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "hardwareProfile": {
+          "vmSize": "Standard_D2s_v3"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2019-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "osType": "Windows",
+            "name": "testvmss_testvmss_1_OsDisk_1_94209804a7bf4e63ab2b1120b4dfd069",
+            "createOption": "FromImage",
+            "caching": "ReadWrite",
+            "managedDisk": {
+              "storageAccountType": "Premium_LRS",
+              "id": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourceGroups/azfwpremvw-ddos/providers/Microsoft.Compute/disks/testvmss_testvmss_1_OsDisk_1_94209804a7bf4e63ab2b1120b4dfd069"
+            },
+            "diskSizeGB": 127
+          },
+          "dataDisks": []
+        },
+        "osProfile": {
+          "computerName": "testvmss5000001",
+          "adminUsername": "sysadmin",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true
+          },
+          "secrets": [],
+          "allowExtensionOperations": true,
+          "requireGuestProvisionSignal": true
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[concat(resourceId('Microsoft.Compute/virtualMachineScaleSets/virtualMachines', 'testvmss', '1'), '/networkInterfaces/d0cc7505-f259-40ae-8e08-75476f2dd378-mymg-vnet-west-nic01')]"
+            }
+          ]
+        },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "enabled": true
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces/savedSearches",
+      "apiVersion": "2020-08-01",
+      "name": "azopstest-law/Security(azopstest-law)_SecurityCriticalNotableIssues|ComputersMissingSecurityUpdates",
+      "properties": {
+        "displayName": "Computers missing security updates",
+        "category": "Security Critical Notable Issues",
+        "query": "Update | where UpdateState == 'Needed' and Optional == false and Classification == 'Security Updates' and Approved != false | summarize count() by Computer",
+        "version": 2
+      }
+    }
+  ],
+  "outputs": {}
+}

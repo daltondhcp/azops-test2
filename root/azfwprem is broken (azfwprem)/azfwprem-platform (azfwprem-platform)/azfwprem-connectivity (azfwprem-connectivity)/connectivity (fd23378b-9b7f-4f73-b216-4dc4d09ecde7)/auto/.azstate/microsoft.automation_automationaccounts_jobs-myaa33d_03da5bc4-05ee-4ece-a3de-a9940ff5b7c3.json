@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Automation/automationAccounts/jobs",
+      "apiVersion": "2019-06-01",
+      "name": "myaa33d/03da5bc4-05ee-4ece-a3de-a9940ff5b7c3",
+      "properties": {
+        "runbook": {
+          "name": "ScheduledStartStop_Child"
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

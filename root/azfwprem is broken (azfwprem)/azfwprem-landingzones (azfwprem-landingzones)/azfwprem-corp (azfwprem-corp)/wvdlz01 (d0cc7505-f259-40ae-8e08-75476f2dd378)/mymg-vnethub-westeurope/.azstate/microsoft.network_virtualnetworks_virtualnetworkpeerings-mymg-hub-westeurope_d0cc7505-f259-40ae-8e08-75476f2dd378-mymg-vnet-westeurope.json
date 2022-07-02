@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "apiVersion": "2020-11-01",
+      "name": "mymg-hub-westeurope/d0cc7505-f259-40ae-8e08-75476f2dd378-mymg-vnet-westeurope",
+      "properties": {
+        "peeringState": "Connected",
+        "remoteVirtualNetwork": {
+          "id": "/subscriptions/d0cc7505-f259-40ae-8e08-75476f2dd378/resourceGroups/mymg-vnet-westeurope/providers/Microsoft.Network/virtualNetworks/d0cc7505-f259-40ae-8e08-75476f2dd378-mymg-vnet-westeurope"
+        },
+        "allowVirtualNetworkAccess": true,
+        "allowForwardedTraffic": true,
+        "allowGatewayTransit": true,
+        "useRemoteGateways": false,
+        "remoteAddressSpace": {
+          "addressPrefixes": [
+            "172.16.200.0/24"
+          ]
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

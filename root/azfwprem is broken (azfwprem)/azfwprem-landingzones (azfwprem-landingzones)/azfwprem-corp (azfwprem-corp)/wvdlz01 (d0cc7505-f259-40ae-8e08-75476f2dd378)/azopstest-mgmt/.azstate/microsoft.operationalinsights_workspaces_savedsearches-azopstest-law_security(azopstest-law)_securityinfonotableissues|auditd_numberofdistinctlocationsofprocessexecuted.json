@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces/savedSearches",
+      "apiVersion": "2020-08-01",
+      "name": "azopstest-law/Security(azopstest-law)_SecurityInfoNotableIssues|Auditd_NumberOfDistinctLocationsOfProcessExecuted",
+      "properties": {
+        "displayName": "Distinct paths of Executed Commands (Linux)",
+        "category": "Security Info Notable Issues",
+        "query": "LinuxAuditLog | where RecordType == 'syscall' and syscall == 'execve' | summarize count() by exe",
+        "version": 2
+      }
+    }
+  ],
+  "outputs": {}
+}
